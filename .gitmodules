@@ -25,3 +25,9 @@
 [submodule "bundle/bufonly"]
 	path = bundle/bufonly
 	url = git://github.com/duff/vim-bufonly.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/snipmate-sass"]
+	path = bundle/snipmate-sass
+	url = git://github.com/welaika/snipmate-sass.git
