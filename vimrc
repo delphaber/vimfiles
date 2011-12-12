@@ -81,6 +81,12 @@ if has("autocmd")
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
 
+  " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+
+  " Movefile is Yaml
+  au BufRead,BufNewFile {Movefile}    set ft=yaml
+
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
@@ -90,8 +96,19 @@ endif
 " provide some context when editing
 set scrolloff=3
 
+" Removes trailing spaces
+function KillWhitespace()
+  %s/\s*$//
+  ''
+:endfunction
+
 " Automatically remove trailing spaces on some files
-autocmd FileType js,coffee,rb,css,sass,scss,haml,slim autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+autocmd FileWritePre * :call KillWhitespace()
+autocmd FileAppendPre * :call KillWhitespace()
+autocmd FilterWritePre * :call KillWhitespace()
+autocmd BufWritePre * :call KillWhitespace()
+map <F2> :call KillWhitespace()<CR>
+map! <F2> :call KillWhitespace()<CR>
 
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
@@ -99,12 +116,17 @@ set directory=~/.vim/_temp      " where to put swap files.
 " == Status bar
 " Always show the status bar
 set laststatus=2
-" Start the status line
-set statusline=%f\ %m\ %r
-" Add fugitive
-set statusline+=%{fugitive#statusline()}
-" Finish the statusline
-set statusline+=Line:%l/%L[%p%%]
-set statusline+=Col:%v
-set statusline+=Buf:#%n
-set statusline+=[%b][0x%B]
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
+
+" == Command-T
+let g:CommandTMaxHeight=20
+
+" makes work arrows in visual mode
+vnoremap <Left> h
+vnoremap <Right> l
+vnoremap <Up> k
+vnoremap <Down> j
+
+" Close all buffers but the current one
+map <F2> :call KillWhitespace()<CR>
+map! <F2> :call KillWhitespace()<CR>

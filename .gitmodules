@@ -1,0 +1,27 @@
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "bundle/indent-guides"]
+	path = bundle/indent-guides
+	url = git://github.com/mutewinter/vim-indent-guides.git
+[submodule "bundle/greplace"]
+	path = bundle/greplace
+	url = git://github.com/vim-scripts/greplace.vim.git
+[submodule "bundle/minibufexplorer"]
+	path = bundle/minibufexplorer
+	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/choosecolor"]
+	path = bundle/choosecolor
+	url = git://github.com/austintaylor/vim-choosecolor.git
+[submodule "bundle/bufonly"]
+	path = bundle/bufonly
+	url = git://github.com/duff/vim-bufonly.git
