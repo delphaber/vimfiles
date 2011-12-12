@@ -3,7 +3,7 @@ My vim configuration
 
 ## Installation:
 
-Prerequisites: ruby, git
+Prerequisites: `ruby`, `git`
 
 1. Move your existing configuration somewhere else:
    `mv .vim* .gvim* my_backup`
