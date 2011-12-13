@@ -1,3 +1,6 @@
+" Inhibit MacVim default shortcuts starting with Command and Option
+let macvim_skip_cmd_opt_movement = 1
+
 " Don't beep
 set visualbell
 
@@ -19,9 +22,9 @@ imap <D-t> <Esc>:CommandT<CR>
 " Command-Shift-F for Ack
 map <D-F> :Ack<space>
 
-" Move between buffers with Command+Shift
-map <D-M-Right> :bn!<CR>
-map <D-M-Left> :bp!<CR>
+" Move between buffers with Command+Arrows
+map <D-Right> :bn!<CR>
+map <D-Left> :bp!<CR>
 
 " Move to last buffer
 map <D-Bslash> :b#<CR>

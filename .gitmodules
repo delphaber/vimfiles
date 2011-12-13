@@ -25,12 +25,6 @@
 [submodule "bundle/bufonly"]
 	path = bundle/bufonly
 	url = git://github.com/duff/vim-bufonly.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
-[submodule "bundle/snipmate-sass"]
-	path = bundle/snipmate-sass
-	url = git://github.com/welaika/snipmate-sass.git
 [submodule "bundle/endwise"]
 	path = bundle/endwise
 	url = git://github.com/tpope/vim-endwise.git
@@ -52,3 +46,15 @@
 [submodule "bundle/slim"]
 	path = bundle/slim
 	url = git://github.com/bbommarito/vim-slim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "bundle/snipmate-mw-utils"]
+	path = bundle/snipmate-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/snipmate-tlib"]
+	path = bundle/snipmate-tlib
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = git://github.com/stefanoverna/snipmate-snippets.git
