@@ -1,7 +1,12 @@
-task :default => [:update, :command_t, :link]
+task :default => [:init_submodules, :command_t, :link]
+
+task :init_submodules do
+  sh "git submodule update --init"
+end
 
 task :update do
-  sh "git submodule update --init"
+  sh "git pull origin master"
+  sh "git submodule foreach git pull"
 end
 
 task :link do
