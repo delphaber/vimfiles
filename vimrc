@@ -1,7 +1,12 @@
 " The set nocompatible setting makes vim behave in a more useful way (the default) than the vi-compatible manner.
 set nocompatible
+
 " Enable syntax highlighting
 syntax enable
+
+" Make tab completion for files/buffers act like bash
+set wildmenu
+
 " Default charset encoding
 set encoding=utf-8
 
@@ -107,8 +112,6 @@ autocmd FileWritePre * :call KillWhitespace()
 autocmd FileAppendPre * :call KillWhitespace()
 autocmd FilterWritePre * :call KillWhitespace()
 autocmd BufWritePre * :call KillWhitespace()
-map <F2> :call KillWhitespace()<CR>
-map! <F2> :call KillWhitespace()<CR>
 
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
@@ -118,15 +121,74 @@ set directory=~/.vim/_temp      " where to put swap files.
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
 
-" == Command-T
-let g:CommandTMaxHeight=20
-
 " makes work arrows in visual mode
-vnoremap <Left> h
-vnoremap <Right> l
-vnoremap <Up> k
-vnoremap <Down> j
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
-" Close all buffers but the current one
-map <F2> :call KillWhitespace()<CR>
-map! <F2> :call KillWhitespace()<CR>
+" == Ruby block ==
+runtime macros/matchit.vim
+
+" == CtrlP ==
+let g:ctrlp_map = '<leader>l'
+map <leader>. :CtrlPMRU<CR>
+let g:ctrlp_match_window_reversed = 0
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
+
+" == AutoTags ==
+let g:easytags_cmd = '/Users/steffoz/bin/ctags'
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+
+" == DestroyAllSoftware tips ==
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" leader-f for Ack
+map <leader>f :Ack<space>
+
+" leader-r for greplace
+map <leader>r :Gqfopen<CR>:ccl<CR>
+
+" Open routes.rb
+map <leader>gr :topleft :split config/routes.rb<cr>
+
+" Open Gemfile
+map <leader>gg :topleft 100 :split Gemfile<cr>
+
+" Seriously, guys. It's not like :W is bound to anything anyway.
+command! W :w
+
+" Can't be bothered to understand the difference between ESC and <c-c> in
+" insert mode
+imap <c-c> <esc>
+
+" == Split windows ==
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+set winheight=5
+set winminheight=5
+set winheight=999
+
+" == ChooseColor ==
+map <leader>c :ChooseColor<CR>
+imap <leader>c <Esc>:ChooseColor<CR>
+
+" == Highlight long lines ==
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" == iTermux ==
+" let g:itermux_session_name = 'vimterm'
+
+" == Map jj to Esc ==
+inoremap jj <Esc>
+
+" == Paste from clipboard ==
+vmap <leader>y :call system("pbcopy", getreg("\""))<CR>
+nmap <leader>p :call setreg("\"",system("pbpaste"))<CR>:set paste<CR>p:set nopaste<CR>
+
