@@ -18,7 +18,8 @@ filetype plugin indent on
 let mapleader=","
 " Black background, please
 set background=dark
-" My favourite syntax colorscheme
+" My favourite syntax colorscheme (iterm 256 colors)
+set t_Co=256
 color ir_black
 
 " Line numbering
@@ -179,7 +180,7 @@ map <leader>c :ChooseColor<CR>
 imap <leader>c <Esc>:ChooseColor<CR>
 
 " == Highlight long lines ==
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight OverLength ctermbg=black guibg=#592929
 match OverLength /\%81v.\+/
 
 " == iTermux ==

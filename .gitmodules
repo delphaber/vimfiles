@@ -7,15 +7,9 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
-[submodule "bundle/indent-guides"]
-	path = bundle/indent-guides
-	url = git://github.com/mutewinter/vim-indent-guides.git
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
-[submodule "bundle/minibufexplorer"]
-	path = bundle/minibufexplorer
-	url = git://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/choosecolor"]
 	path = bundle/choosecolor
 	url = git://github.com/austintaylor/vim-choosecolor.git
@@ -61,18 +55,12 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = git://github.com/tsaleh/vim-align.git
-[submodule "bundle/powerline"]
-	path = bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/pasta"]
 	path = bundle/pasta
 	url = https://github.com/sickill/vim-pasta.git
 [submodule "bundle/textobj-user"]
 	path = bundle/textobj-user
 	url = https://github.com/kana/vim-textobj-user.git
-[submodule "bundle/rubyblock"]
-	path = bundle/rubyblock
-	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = git://github.com/tpope/vim-rails.git
@@ -85,9 +73,3 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "bundle/easytags"]
-	path = bundle/easytags
-	url = git://github.com/xolox/vim-easytags.git
-[submodule "bundle/zoom-win"]
-	path = bundle/zoom-win
-	url = git://github.com/vim-scripts/ZoomWin.git
