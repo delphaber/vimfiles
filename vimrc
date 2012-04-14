@@ -121,6 +121,11 @@ set directory=~/.vim/_temp      " where to put swap files.
 " Always show the status bar
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
+" Change background color of status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=darkred gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=darkblue gui=bold,reverse
+endif
 
 " makes work arrows in visual mode
 noremap <Up> <nop>
@@ -187,4 +192,28 @@ inoremap jj <Esc>
 " == Paste from clipboard ==
 vmap <leader>y "*y
 nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
+
+" == Current line highlighter ==
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline
+set cursorline
+hi CursorLine cterm=NONE ctermbg=0 guibg=darkred
+
+" == %% gets converted to "directory of current file" ==
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" == Prefills :edit command with the current dir ==
+map <leader>e :edit %%
+
+" == Rename the current file! ==
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
 
