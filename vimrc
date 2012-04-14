@@ -137,11 +137,6 @@ map <leader>. :CtrlPMRU<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
 
-" == AutoTags ==
-let g:easytags_cmd = '/Users/steffoz/bin/ctags'
-set tags=./tags;
-let g:easytags_dynamic_files = 1
-
 " == DestroyAllSoftware tips ==
 
 " Switch between the last two files
@@ -190,6 +185,6 @@ match OverLength /\%81v.\+/
 inoremap jj <Esc>
 
 " == Paste from clipboard ==
-vmap <leader>y :call system("pbcopy", getreg("\""))<CR>
-nmap <leader>p :call setreg("\"",system("pbpaste"))<CR>:set paste<CR>p:set nopaste<CR>
+vmap <leader>y "*y
+nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
 

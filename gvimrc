@@ -27,8 +27,3 @@ set gfn=Monaco:h13
 map <D-C> :ChooseColor<CR>
 imap <D-C> <Esc>:ChooseColor<CR>
 
-" Indent guides
-let g:indent_guides_guide_size=1
-let g:indent_guides_color_change_percent=4
-:IndentGuidesEnable
-
