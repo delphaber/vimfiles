@@ -112,10 +112,10 @@ function KillWhitespace()
 :endfunction
 
 " Automatically remove trailing spaces on some files
-autocmd FileWritePre * :call KillWhitespace()
-autocmd FileAppendPre * :call KillWhitespace()
-autocmd FilterWritePre * :call KillWhitespace()
-autocmd BufWritePre * :call KillWhitespace()
+" autocmd FileWritePre * :call KillWhitespace()
+" autocmd FileAppendPre * :call KillWhitespace()
+" autocmd FilterWritePre * :call KillWhitespace()
+" autocmd BufWritePre * :call KillWhitespace()
 
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
