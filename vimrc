@@ -28,6 +28,9 @@ set number
 set ruler
 set cursorline
 
+" I like the mouse
+set mouse=a
+
 " Display incomplete commands
 set showcmd
 
