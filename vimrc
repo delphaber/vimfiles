@@ -28,6 +28,14 @@ set number
 set ruler
 set cursorline
 
+" autostart nerdtree
+autocmd vimenter * NERDTree
+
+" minibufexpl
+let g:miniBufExplUseSingleClick = 1
+nmap <silent> <S-left> :bp<cr>
+nmap <silent> <S-right> :bn<cr>
+
 " I like the mouse
 set mouse=a
 
