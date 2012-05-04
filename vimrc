@@ -191,8 +191,8 @@ map <leader>c :ChooseColor<CR>
 imap <leader>c <Esc>:ChooseColor<CR>
 
 " == Highlight long lines ==
-highlight OverLength ctermbg=black guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=black guibg=#592929
+" match OverLength /\%81v.\+/
 
 " == iTermux ==
 " let g:itermux_session_name = 'vimterm'
