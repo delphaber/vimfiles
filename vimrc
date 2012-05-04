@@ -183,7 +183,7 @@ set winwidth=84
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
 set winheight=5
-" set winminheight=5
+set winminheight=1
 set winheight=999
 
 " == ChooseColor ==
