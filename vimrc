@@ -29,7 +29,7 @@ set ruler
 set cursorline
 
 " autostart nerdtree
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
 " minibufexpl
 let g:miniBufExplUseSingleClick = 1
