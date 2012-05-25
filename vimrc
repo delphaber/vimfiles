@@ -178,37 +178,21 @@ command! W :w
 imap <c-c> <esc>
 
 " == Split windows ==
-set winwidth=84
+" set winwidth=84
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
-set winheight=5
-set winminheight=1
-set winheight=999
+" set winheight=5
+" set winminheight=5
+" set winheight=999
 
 " == ChooseColor ==
 map <leader>c :ChooseColor<CR>
 imap <leader>c <Esc>:ChooseColor<CR>
 
-" == Highlight long lines ==
-" highlight OverLength ctermbg=black guibg=#592929
-" match OverLength /\%81v.\+/
-
-" == iTermux ==
-" let g:itermux_session_name = 'vimterm'
-
-" == Map jj to Esc ==
-inoremap jj <Esc>
-
 " == Paste from clipboard ==
 vmap <leader>y "*y
 nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
-
-" == Current line highlighter ==
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline
-set cursorline
-hi CursorLine cterm=NONE ctermbg=0 guibg=darkred
 
 " == %% gets converted to "directory of current file" ==
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
