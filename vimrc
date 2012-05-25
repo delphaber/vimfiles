@@ -17,10 +17,9 @@ filetype plugin indent on
 " Leader key
 let mapleader=","
 " Black background, please
-set background=dark
-" My favourite syntax colorscheme (iterm 256 colors)
 set t_Co=256
-color ir_black
+color molokai
+" let g:molokai_original = 1
 
 " Line numbering
 set number
