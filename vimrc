@@ -27,8 +27,9 @@ set number
 set ruler
 set cursorline
 
-" autostart nerdtree
+" === NERDTREE ===
 " autocmd vimenter * NERDTree
+nmap <silent><leader>t :NERDTreeToggle<CR>
 
 " minibufexpl
 let g:miniBufExplUseSingleClick = 1
