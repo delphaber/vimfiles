@@ -6,7 +6,7 @@ end
 
 task :update do
   sh "git pull origin master"
-  sh "git submodule foreach git pull"
+  sh "git submodule foreach git pull origin master"
 end
 
 task :link do
