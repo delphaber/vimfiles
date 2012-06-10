@@ -16,8 +16,9 @@ filetype plugin indent on
 
 " Leader key
 let mapleader=","
-" Black background, please
+
 set t_Co=256
+set background=dark
 color molokai
 " let g:molokai_original = 1
 
