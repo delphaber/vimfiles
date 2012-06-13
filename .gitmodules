@@ -10,9 +10,6 @@
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
-[submodule "bundle/choosecolor"]
-	path = bundle/choosecolor
-	url = git://github.com/austintaylor/vim-choosecolor.git
 [submodule "bundle/bufonly"]
 	path = bundle/bufonly
 	url = git://github.com/duff/vim-bufonly.git
