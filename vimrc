@@ -195,6 +195,10 @@ imap <leader>c <Esc>:ChooseColor<CR>
 vmap <leader>y "*y
 nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
 
+
+nmap <Leader>j :SplitjoinJoin<CR>
+nmap <Leader>s :SplitjoinSplit<CR>>
+
 " == %% gets converted to "directory of current file" ==
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
