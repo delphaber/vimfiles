@@ -85,3 +85,6 @@
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
+[submodule "bundle/splitjoin"]
+	path = bundle/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
