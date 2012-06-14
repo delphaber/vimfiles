@@ -219,7 +219,3 @@ map <leader>n :call RenameFile()<cr>
 
 " ==== ACK ==== "
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-
-" ==== textobj-rubyblock"
-runtime macros/matchit.vim
