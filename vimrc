@@ -112,7 +112,7 @@ if has("autocmd")
 endif
 
 " provide some context when editing
-set scrolloff=3
+set scrolloff=5
 
 " Removes trailing spaces
 function KillWhitespace()
