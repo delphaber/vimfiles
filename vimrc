@@ -141,11 +141,11 @@ runtime macros/matchit.vim
 
 " == CtrlP ==
 let g:ctrlp_map = '<leader>l'
-map <leader>. :CtrlPMRU<CR>
+map <leader>. :CtrlPBufTag<CR>
+map <leader>u :CtrlPUndo<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
-
-" == DestroyAllSoftware tips ==
+let g:ctrlp_extensions = ['buffertag', 'undo']
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
