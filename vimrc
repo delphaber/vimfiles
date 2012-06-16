@@ -83,7 +83,7 @@ set ignorecase
 " ...unless they contain at least one capital letter
 set smartcase
 " clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
+nnoremap <CR> :nohlsearch<cr>
 
 " Wrap text automatically setup
 function s:setupWrapping()
@@ -217,10 +217,10 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
-" ==== ACK ==== "
+" == ACK == "
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
-" MiniBufExpl Colors
+" == MiniBufExpl Colors ==
 hi MBEVisibleActive guifg=#A6DB29 guibg=fg
 hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
 hi MBEVisibleChanged guifg=#F1266F guibg=fg
