@@ -114,17 +114,8 @@ endif
 " provide some context when editing
 set scrolloff=5
 
-" Removes trailing spaces
-function KillWhitespace()
-  %s/\s*$//
-  ''
-:endfunction
-
-" Automatically remove trailing spaces on some files
-" autocmd FileWritePre * :call KillWhitespace()
-" autocmd FileAppendPre * :call KillWhitespace()
-" autocmd FilterWritePre * :call KillWhitespace()
-" autocmd BufWritePre * :call KillWhitespace()
+" remove whitespaces
+command! KillWhitespace :normal :%s/\s\+$//e<cr><c-o><cr>
 
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
@@ -166,10 +157,10 @@ map <leader>f :Ack<space>
 map <leader>r :Gqfopen<CR>:ccl<CR>
 
 " Open routes.rb
-map <leader>gr :topleft :split config/routes.rb<cr>
+map <leader>gr :o config/routes.rb<cr>
 
 " Open Gemfile
-map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>gg :o Gemfile<cr>
 
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
@@ -178,24 +169,11 @@ command! W :w
 " insert mode
 imap <c-c> <esc>
 
-" == Split windows ==
-" set winwidth=84
-" We have to have a winheight bigger than we want to set winminheight. But if
-" we set winheight to be huge before winminheight, the winminheight set will
-" fail.
-" set winheight=5
-" set winminheight=5
-" set winheight=999
-
-" == ChooseColor ==
-map <leader>c :ChooseColor<CR>
-imap <leader>c <Esc>:ChooseColor<CR>
-
 " == Paste from clipboard ==
 vmap <leader>y "*y
 nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
 
-
+" == Split Join ==
 nmap <Leader>j :SplitjoinJoin<CR>
 nmap <Leader>s :SplitjoinSplit<CR>>
 
