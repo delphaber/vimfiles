@@ -121,14 +121,8 @@ set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 
 " == Status bar
-" Always show the status bar
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
-" Change background color of status line based on mode
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=darkred gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=darkblue gui=bold,reverse
-endif
 
 " makes work arrows in visual mode
 noremap <Up> <nop>
