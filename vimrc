@@ -31,6 +31,8 @@ set cursorline
 " === NERDTREE ===
 " autocmd vimenter * NERDTree
 nmap <silent><leader>t :NERDTreeToggle<CR>
+let g:NERDTreeMouseMode = 3
+let g:NERDTreeHighlightCursorline = 0
 
 " minibufexpl
 let g:miniBufExplUseSingleClick = 1
