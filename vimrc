@@ -148,6 +148,7 @@ map <leader>u :CtrlPUndo<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
 let g:ctrlp_extensions = ['buffertag', 'undo']
+let g:ctrlp_root_markers = ['root.dir']
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
