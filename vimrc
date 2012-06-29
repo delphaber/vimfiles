@@ -28,6 +28,10 @@ set number
 set ruler
 set cursorline
 
+" TRICKS
+nmap <F1> :echo<CR>
+imap <F1> <C-o>:echo<CR>
+
 " === NERDTREE ===
 " autocmd vimenter * NERDTree
 nmap <silent><leader>t :NERDTreeToggle<CR>
