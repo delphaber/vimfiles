@@ -173,8 +173,8 @@ command! W :w
 imap <c-c> <esc>
 
 " == Paste from clipboard ==
-vmap <leader>y "*y
-nmap <leader>p :set paste<CR>"*p:set nopaste<CR>
+vmap <leader>y "+y
+nmap <leader>p :set paste<CR>"+p:set nopaste<CR>
 
 " == Split Join ==
 nmap <Leader>j :SplitjoinJoin<CR>
