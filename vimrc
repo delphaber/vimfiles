@@ -122,10 +122,6 @@ command! KillWhitespace :normal :%s/\s\+$//e<cr><c-o><cr>
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 
-" == Status bar
-set laststatus=2
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
-
 " makes work arrows in visual mode
 noremap <Up> <nop>
 noremap <Down> <nop>
@@ -208,3 +204,12 @@ hi MBEVisibleChanged guifg=#F1266F guibg=fg
 hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
 hi MBEChanged guifg=#CD5907 guibg=fg
 hi MBENormal guifg=#808080 guibg=fg
+
+" == Status bar, replaced with Powerline
+" Always show the status bar
+" set laststatus=2
+" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
+" Change background color of status line based on mode
+" au InsertEnter * hi StatusLine term=reverse ctermbg=darkred gui=undercurl guisp=Magenta
+" au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=darkblue gui=bold,reverse
+" let g:Powerline_symbols = 'fancy'
