@@ -37,6 +37,7 @@ imap <F1> <C-o>:echo<CR>
 nmap <silent><leader>t :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
+let g:NERDTreeShowBookmarks = 1
 
 " minibufexpl
 let g:miniBufExplUseSingleClick = 1
