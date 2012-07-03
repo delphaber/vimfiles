@@ -39,7 +39,7 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeShowBookmarks = 1
 
-" minibufexpl
+" === minibufexpl ===
 let g:miniBufExplUseSingleClick = 1
 nmap <silent> <S-left> :bp<cr>
 nmap <silent> <S-right> :bn<cr>
