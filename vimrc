@@ -39,11 +39,6 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:NERDTreeShowBookmarks = 1
 
-" === minibufexpl ===
-let g:miniBufExplUseSingleClick = 1
-nmap <silent> <S-left> :bp<cr>
-nmap <silent> <S-right> :bn<cr>
-
 " I like the mouse
 set mouse=a
 
@@ -178,29 +173,19 @@ vmap <leader>y "+y
 nmap <leader>p :set paste<CR>"+p:set nopaste<CR>
 
 " == Split Join ==
-nmap <Leader>j :SplitjoinJoin<CR>
-nmap <Leader>s :SplitjoinSplit<CR>>
+nmap sj :SplitjoinJoin<CR>
+nmap ss :SplitjoinSplit<CR>>
 
 " == %% gets converted to "directory of current file" ==
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" == Prefills :edit command with the current dir ==
-map <leader>e :edit %%
-
-" == Rename the current file! ==
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
 " == ACK == "
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+" === minibufexpl ===
+let g:miniBufExplUseSingleClick = 1
+nmap <silent> <S-left> :bp<cr>
+nmap <silent> <S-right> :bn<cr>
 
 " == MiniBufExpl Colors ==
 hi MBEVisibleActive guifg=#A6DB29 guibg=fg
