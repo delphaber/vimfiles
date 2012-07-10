@@ -152,15 +152,6 @@ nnoremap <leader><leader> <c-^>
 " leader-f for Ack
 map <leader>f :Ack<space>
 
-" leader-r for greplace
-map <leader>r :Gqfopen<CR>:ccl<CR>
-
-" Open routes.rb
-map <leader>gr :o config/routes.rb<cr>
-
-" Open Gemfile
-map <leader>gg :o Gemfile<cr>
-
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
 
