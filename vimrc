@@ -37,7 +37,7 @@ imap <F1> <C-o>:echo<CR>
 nmap <silent><leader>t :NERDTreeToggle<CR>
 let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
-let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeShowBookmarks = 0
 
 " I like the mouse
 set mouse=a
@@ -134,6 +134,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" navigation between buffers
+nmap <silent> <S-left> :bp<cr>
+nmap <silent> <S-right> :bn<cr>
+
+" always show status bar
+set laststatus=2
+
 " == Ruby block ==
 runtime macros/matchit.vim
 
@@ -172,25 +179,3 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " == ACK == "
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-" === minibufexpl ===
-let g:miniBufExplUseSingleClick = 1
-nmap <silent> <S-left> :bp<cr>
-nmap <silent> <S-right> :bn<cr>
-
-" == MiniBufExpl Colors ==
-hi MBEVisibleActive guifg=#A6DB29 guibg=fg
-hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
-hi MBEVisibleChanged guifg=#F1266F guibg=fg
-hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
-hi MBEChanged guifg=#CD5907 guibg=fg
-hi MBENormal guifg=#808080 guibg=fg
-
-" == Status bar, replaced with Powerline
-" Always show the status bar
-" set laststatus=2
-" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{fugitive#statusline()}
-" Change background color of status line based on mode
-" au InsertEnter * hi StatusLine term=reverse ctermbg=darkred gui=undercurl guisp=Magenta
-" au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=darkblue gui=bold,reverse
-" let g:Powerline_symbols = 'fancy'
