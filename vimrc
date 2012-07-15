@@ -172,7 +172,7 @@ nmap <leader>p :set paste<CR>"+p:set nopaste<CR>
 
 " == Split Join ==
 nmap sj :SplitjoinJoin<CR>
-nmap ss :SplitjoinSplit<CR>>
+nmap ss :SplitjoinSplit<CR>
 
 " == %% gets converted to "directory of current file" ==
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
