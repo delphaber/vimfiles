@@ -135,8 +135,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " navigation between buffers
-nmap <silent> <S-left> :bp<cr>
-nmap <silent> <S-right> :bn<cr>
+nmap <silent> <S-left> :bp<CR>
+nmap <silent> <S-right> :bn<CR>
+
+nmap <silent> <leader>b :buffers<CR>
 
 " always show status bar
 set laststatus=2
@@ -147,6 +149,7 @@ runtime macros/matchit.vim
 " == CtrlP ==
 let g:ctrlp_map = '<leader>l'
 map <leader>. :CtrlPBufTag<CR>
+map <leader>- :CtrlPBuffer<CR>
 map <leader>u :CtrlPUndo<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
