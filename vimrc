@@ -140,8 +140,11 @@ nmap <silent> <S-right> :bn<CR>
 
 nmap <silent> <leader>b :buffers<CR>
 
+" == Powerline ==
 " always show status bar
 set laststatus=2
+
+let g:Powerline_symbols = 'fancy'
 
 " == Ruby block ==
 runtime macros/matchit.vim
