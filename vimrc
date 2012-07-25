@@ -151,8 +151,8 @@ runtime macros/matchit.vim
 
 " == CtrlP ==
 let g:ctrlp_map = '<leader>l'
-map <leader>. :CtrlPBufTag<CR>
-map <leader>- :CtrlPBuffer<CR>
+map <leader>- :CtrlPBufTag<CR>
+map <leader>. :CtrlPBuffer<CR>
 map <leader>u :CtrlPUndo<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
