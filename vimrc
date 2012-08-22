@@ -20,7 +20,6 @@ let mapleader=","
 set t_Co=256
 set background=dark
 color molokai
-" let g:molokai_original = 1
 
 " Line numbering
 set number
