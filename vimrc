@@ -179,6 +179,14 @@ nmap <leader>p :set paste<CR>"+p:set nopaste<CR>
 nmap sj :SplitjoinJoin<CR>
 nmap ss :SplitjoinSplit<CR>
 
+""" Windows
+set splitright                    " create new horizontal split on the right
+set splitbelow                    " create new vertical split below the current window
+set winheight=5                   " set winheight to low number...
+set winminheight=5                " or this will fail
+set winheight=999
+set winwidth=84
+
 " == %% gets converted to "directory of current file" ==
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
