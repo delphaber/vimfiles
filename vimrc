@@ -1,183 +1,57 @@
-" The set nocompatible setting makes vim behave in a more useful way (the default) than the vi-compatible manner.
-set nocompatible
-
-" Enable syntax highlighting
-syntax enable
-
-" Make tab completion for files/buffers act like bash
-set wildmenu
-
-" Default charset encoding
-set encoding=utf-8
-
-" Pathogen initialization
 call pathogen#infect()
-filetype plugin indent on
 
-" Leader key
-let mapleader=","
+"" Sane defaults
+set encoding=utf-8
+let &t_Co=256                     " moar colors
+set clipboard=unnamedplus         " use system clipboard
+set nocompatible                  " nocompatible is good for humans
+syntax enable                     " enable syntax highlighting...
+filetype plugin indent on         " depending on filetypes...
+runtime macros/matchit.vim        " with advanced matching capabilities
+set pastetoggle=<F12>             " for pasting code into Vim
 
-set t_Co=256
+"" Style
 set background=dark
 color molokai
+set number                        " line numbers are cool
+set ruler                         " show the cursor position all the time
+set nocursorline                  " disable cursor line
+set showcmd                       " display incomplete commands
+set visualbell                    " no beeps please
+set scrolloff=3                   " provide some context when editing
+set hidden                        " Allow backgrounding buffers without writing them, and
+                                  " remember marks/undo for backgrounded buffers
+"" Mouse
+set mousehide                     " hide mouse when writing
+set mouse=a                       " we love the mouse
 
-" Line numbering
-set number
-" Show the cursor position all the time
-set ruler
-set cursorline
+"" Whitespace
+set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set softtabstop=2                 " when deleting, treat spaces as tabs
+set expandtab                     " use spaces, not tabs
+set list                          " show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
 
-" TRICKS
-nmap <F1> :echo<CR>
-imap <F1> <C-o>:echo<CR>
+"" Wild life
+set wildmenu                      " wildmenu gives autocompletion to vim
+set wildmode=list:longest,full    " autocompletion shouldn't jump to the first match
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.csv,*.pyc,*.xls
 
-" === NERDTREE ===
-" autocmd vimenter * NERDTree
-nmap <silent><leader>t :NERDTreeToggle<CR>
-let g:NERDTreeMouseMode = 3
-let g:NERDTreeHighlightCursorline = 0
-let g:NERDTreeShowBookmarks = 0
-
-" I like the mouse
-set mouse=a
-
-" Display incomplete commands
-set showcmd
-
-" Allow backgrounding buffers without writing them, and remember marks/undo
-" for backgrounded buffers
-set hidden
-
-" == Whitespace ==
-" Don't wrap lines
-set nowrap
-" A tab is two spaces
-set tabstop=2
-" An autoindent (with <<) is two spaces
-set shiftwidth=2
-" Use spaces, not tabs
-set expandtab
-" Show invisible characters
-set list
-" backspace through everything in insert mode
-set backspace=indent,eol,start    " List chars
-" Reset the listchars
-set listchars=""
-" A tab should display as "  ", trailing whitespace as "·"
-set listchars=tab:\ \
- " Show trailing spaces as dots
-set listchars+=trail:·
-" The character to show in the last column when wrap is
-" off and the line continues beyond the right of the screen
-set listchars+=extends:>
-" The character to show in the last column when wrap is
-" off and the line continues beyond the right of the screen
-set listchars+=precedes:<
-
-" == Searching ==
-" Highlight matches
-set hlsearch
-" Incremental searching
-set incsearch
-" Searches are case insensitive...
-set ignorecase
-" ...unless they contain at least one capital letter
-set smartcase
-" clear the search buffer when hitting return
-nnoremap <CR> :nohlsearch<cr>
-
-" Wrap text automatically setup
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
-
-if has("autocmd")
-  " Make sure all mardown files have the correct filetype set and setup wrapping
-  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
-
-  " Treat JSON files like JavaScript
-  au BufNewFile,BufRead *.json set ft=javascript
-
-  " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-
-  " Movefile is Yaml
-  au BufRead,BufNewFile {Movefile}    set ft=yaml
-
-  " Remember last location in file, but not for commit messages.
-  " see :help last-position-jump
-  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g`\"" | endif
-endif
-
-" provide some context when editing
-set scrolloff=5
-
-" remove whitespaces
-command! KillWhitespace :normal :%s/\s\+$//e<cr><c-o><cr>
-
-set backupdir=~/.vim/_backup    " where to put backup files.
-set directory=~/.vim/_temp      " where to put swap files.
-
-" makes work arrows in visual mode
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-
-" easier navigation between split windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
-" navigation between buffers
-nmap <silent> <S-left> :bp<CR>
-nmap <silent> <S-right> :bn<CR>
-
-nmap <silent> <leader>b :buffers<CR>
-
-" == Powerline ==
-" always show status bar
-set laststatus=2
-
-let g:Powerline_symbols = 'fancy'
-
-" == Ruby block ==
-runtime macros/matchit.vim
-
-" == CtrlP ==
-let g:ctrlp_map = '<leader>l'
-map <leader>- :CtrlPBufTag<CR>
-map <leader>. :CtrlPBuffer<CR>
-map <leader>u :CtrlPUndo<CR>
-let g:ctrlp_match_window_reversed = 0
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
-let g:ctrlp_extensions = ['buffertag', 'undo']
-let g:ctrlp_root_markers = ['root.dir']
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
-
-" leader-f for Ack
-map <leader>f :Ack<space>
-
-" Seriously, guys. It's not like :W is bound to anything anyway.
-command! W :w
-
-" Can't be bothered to understand the difference between ESC and <c-c> in
-" insert mode
-imap <c-c> <esc>
-
-" == Paste from clipboard ==
-vmap <leader>y "+y
-nmap <leader>p :set paste<CR>"+p:set nopaste<CR>
-
-" == Split Join ==
-nmap sj :SplitjoinJoin<CR>
-nmap ss :SplitjoinSplit<CR>
+"" List chars
+set listchars=""                  " reset the listchars
+"set listchars=tab:▸\ ,eol:¬       " a tab should display as "▸ ", end of lines as "¬"
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " the character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " the character to show in the first column when wrap is
+                                  " off and the line continues beyond the left of the screen
+"" Searching
+set hlsearch                      " highlight matches
+set incsearch                     " incremental searching
+set ignorecase                    " searches are case insensitive...
+set smartcase                     " unless they contain at least one capital letter
 
 """ Windows
 set splitright                    " create new horizontal split on the right
@@ -187,18 +61,123 @@ set winminheight=5                " or this will fail
 set winheight=999
 set winwidth=84
 
-" == %% gets converted to "directory of current file" ==
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+"" Code conventions
+if has("autocmd")
+  " in Makefiles use real tabs, not tabs expanded to spaces
+  au FileType make setl ts=8 sts=8 sw=8 noet
 
-" == ACK == "
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+  " make sure all markdown files have the correct filetype set and setup wrapping
+  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
+
+  " treat JSON files like JavaScript
+  au BufNewFile,BufRead *.json setf javascript
+
+  " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
+  au FileType python,htmldjango setl sts=4 ts=4 sw=4
+
+  " delete Fugitive buffers when they become inactive
+  au BufReadPost fugitive://* set bufhidden=delete
+
+  " remember last location in file, but not for commit messages,
+  " or when the position is invalid or inside an event handler,
+  " or when the mark is in the first line, that is the default
+  " position when opening a file. See :help last-position-jump
+  au BufReadPost *
+    \ if &filetype !~ '^git\c' && line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+
+"" Backup and status line
+set backupdir=~/.vim/_backup    " where to put backup files.
+set directory=~/.vim/_temp      " where to put swap files.
+set laststatus=2
+
+"" Mappings! Set <Leader> key
+let mapleader=","
+
+" disable man page for word under cursor
+nnoremap K <nop>
+
+" y u consistent?
+nnoremap Y y$
+
+" clear the search buffer when hitting return
+nnoremap <CR> :nohlsearch<CR>
+
+" expand %% to current directory
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+
+" edit file in the same directory of current file
+map <Leader>e :e %%
+
+" easy way to switch between latest files
+nnoremap <Leader><Leader> <C-^>
+
+" find merge conflict markers
+nmap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" toggle list mode
+nmap <silent> <Leader>l :set nolist!<CR>
+
+" copy current path
+nmap <silent> <Leader>p :let @* = expand("%")<CR>
+
+" easy substitutions
+nmap <Leader>r :%s///gc<Left><Left><Left><Left>
+nmap <Leader>R :%s:::gc<Left><Left><Left><Left>
+
+" remove whitespaces and windows EOL
+command! KillWhitespace :normal :%s/\s\+$//e<CR><C-O><CR>
+command! KillControlM :normal :%s/<C-V><C-M>//e<CR><C-O><CR>
+
+" easier navigation between split windows
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
+
+" disable cursor keys in normal mode
+map <Left>  :echo "no!"<CR>
+map <Right> :echo "no!"<CR>
+map <Up>    :echo "no!"<CR>
+map <Down>  :echo "no!"<CR>
+
+"" Fugitive
+map <Leader>gs  :Gstatus<CR>
+map <Leader>gd  :Gdiff<CR>
+map <Leader>gci :Gcommit<CR>
+map <Leader>gw  :Gwrite<CR>
+map <Leader>gr  :Gread<CR>
+
+"" Plugins mapping
+map <Leader>f :CommandT<CR>
+map <Leader>F :CommandTFlush<CR>\|:CommandT<CR>
+map <silent> <S-left> <Esc>:bp<CR>
+map <silent> <S-right> <Esc>:bn<CR>
+map <Leader>a <Esc>:Ack<space>
+map <Leader>n :NERDTreeToggle<CR>
+map <Leader>u :GundoToggle<CR>
+
+"" Plugins configuration
+let g:ctrlp_map = '<leader>l'
+map <leader>- :CtrlPBufTag<CR>
+map <leader>. :CtrlPBuffer<CR>
+let g:ctrlp_match_window_reversed = 0
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
+let g:ctrlp_extensions = ['buffertag']
+let g:ctrlp_root_markers = ['root.dir']
+let g:NERDTreeMouseMode = 3
+let g:NERDTreeHighlightCursorline = 0
+let g:gundo_right = 1
+let g:Powerline_symbols = 'fancy'
 
 "" Testing helpers
 function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
     :silent !echo;echo;echo;echo;echo
-    exec ":!rspec --no-drb " . a:filename
+    exec ":!rspec " . a:filename
 endfunction
 
 function! SetTestFile()
