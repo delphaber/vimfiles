@@ -151,8 +151,6 @@ map <Leader>gw  :Gwrite<CR>
 map <Leader>gr  :Gread<CR>
 
 "" Plugins mapping
-map <Leader>f :CommandT<CR>
-map <Leader>F :CommandTFlush<CR>\|:CommandT<CR>
 map <silent> <S-left> <Esc>:bp<CR>
 map <silent> <S-right> <Esc>:bn<CR>
 map <Leader>a <Esc>:Ack<space>
