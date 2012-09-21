@@ -118,7 +118,7 @@ nnoremap <Leader><Leader> <C-^>
 nmap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 " toggle list mode
-nmap <silent> <Leader>l :set nolist!<CR>
+nmap <silent> <Leader>s :set nolist!<CR>
 
 " copy current path
 nmap <silent> <Leader>p :let @* = expand("%")<CR>
