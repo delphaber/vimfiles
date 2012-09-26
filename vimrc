@@ -17,12 +17,12 @@ set number                        " line numbers are cool
 set ruler                         " show the cursor position all the time
 set nocursorline                  " disable cursor line
 set showcmd                       " display incomplete commands
-set visualbell                    " no beeps please
+set novisualbell                  " no beeps please
 set scrolloff=3                   " provide some context when editing
 set hidden                        " Allow backgrounding buffers without writing them, and
                                   " remember marks/undo for backgrounded buffers
 "" Mouse
-set mousehide                     " hide mouse when writing
+set nomousehide                     " hide mouse when writing
 set mouse=a                       " we love the mouse
 
 "" Whitespace
