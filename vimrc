@@ -22,7 +22,7 @@ set scrolloff=3                   " provide some context when editing
 set hidden                        " Allow backgrounding buffers without writing them, and
                                   " remember marks/undo for backgrounded buffers
 "" Mouse
-set nomousehide                     " hide mouse when writing
+set nomousehide                   " fix problem with cursor and ubuntu?
 set mouse=a                       " we love the mouse
 
 "" Whitespace
