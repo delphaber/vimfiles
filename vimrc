@@ -148,7 +148,6 @@ map <Leader>gr  :Gread<CR>
 "" Plugins mapping
 map <silent> <S-left> <Esc>:bp<CR>
 map <silent> <S-right> <Esc>:bn<CR>
-map <Leader>a <Esc>:Ack<space>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
 
