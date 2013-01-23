@@ -51,10 +51,10 @@ set smartcase                     " unless they contain at least one capital let
 """ Windows
 set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
-set winheight=5                   " set winheight to low number...
-set winminheight=5                " or this will fail
-set winheight=999
-set winwidth=84
+" set winheight=5                   " set winheight to low number...
+" set winminheight=5                " or this will fail
+" set winheight=999
+" set winwidth=84
 
 "" Code conventions
 if has("autocmd")
