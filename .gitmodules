@@ -22,18 +22,6 @@
 [submodule "bundle/coffeescript"]
 	path = bundle/coffeescript
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/garbas/vim-snipmate.git
-[submodule "bundle/snipmate-mw-utils"]
-	path = bundle/snipmate-mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "bundle/snipmate-tlib"]
-	path = bundle/snipmate-tlib
-	url = git://github.com/tomtom/tlib_vim.git
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = git://github.com/stefanoverna/snipmate-snippets.git
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = git://github.com/othree/html5.vim.git
@@ -97,3 +85,6 @@
 [submodule "bundle/ack-vim"]
 	path = bundle/ack-vim
 	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
