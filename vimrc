@@ -156,7 +156,6 @@ map <Leader>u :GundoToggle<CR>
 let g:ctrlp_map = '<leader>l'
 map <leader>- :CtrlPBufTag<CR>
 map <leader>. :CtrlPBuffer<CR>
-map <leader>L :CtrlPClearAllCaches<CR>:CtrlP<CR>
 let g:ctrlp_match_window_reversed = 0
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
 let g:ctrlp_extensions = ['buffertag']
