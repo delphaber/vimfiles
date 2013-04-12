@@ -206,3 +206,6 @@ map <leader>t :call RunTestFile()<cr>
 map <leader>T :call RunNearestTest()<cr>
 " Run all test files
 map <leader>A :call RunTests('spec')<cr>
+
+" Ruby && Rails commodities
+noremap <leader>rr :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>
