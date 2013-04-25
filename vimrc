@@ -157,7 +157,7 @@ let g:ctrlp_map = '<leader>l'
 map <leader>- :CtrlPBufTag<CR>
 map <leader>. :CtrlPBuffer<CR>
 let g:ctrlp_match_window_reversed = 0
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*,*/node_modules/*
 let g:ctrlp_extensions = ['buffertag']
 let g:ctrlp_root_markers = ['root.dir']
 let g:NERDTreeMouseMode = 3
