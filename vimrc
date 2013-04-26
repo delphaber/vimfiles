@@ -62,7 +62,7 @@ set splitbelow                    " create new vertical split below the current 
 " set winwidth=84
 
 "" Other 
-set timeout tm=1000 ttm=100 " fix slight delay after pressing ESC then O
+set timeout timeoutlen=1000 ttimeoutlen=100 " fix slight delay after pressing ESC then O
 set autoread " auto reload buffer if file has been changed
 
 "" Code conventions
