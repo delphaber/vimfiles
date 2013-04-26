@@ -53,7 +53,7 @@ set incsearch                     " incremental searching
 set ignorecase                    " searches are case insensitive...
 set smartcase                     " unless they contain at least one capital letter
 
-""" Windows
+"" Windows
 set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
 " set winheight=5                   " set winheight to low number...
