@@ -43,6 +43,10 @@ set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.csv,*.pyc,*.xls
 "" List chars
 set list!
 
+"" Per project vimrc
+set exrc
+set secure
+
 "" Searching
 set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
