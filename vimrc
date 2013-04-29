@@ -34,6 +34,7 @@ set softtabstop=2                 " when deleting, treat spaces as tabs
 set expandtab                     " use spaces, not tabs
 set list                          " show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+set autoindent                    " keep indentation level when no indent is found
 
 "" Wild life
 set wildmenu                      " wildmenu gives autocompletion to vim
@@ -41,7 +42,13 @@ set wildmode=list:longest,full    " autocompletion shouldn't jump to the first m
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.csv,*.pyc,*.xls
 
 "" List chars
-set list!
+set listchars=""                  " reset the listchars
+set listchars=tab:▸\ ,eol:¬       " a tab should display as "▸ ", end of lines as "¬"
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " the character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " the character to show in the first column when wrap is
+                                  " off and the line continues beyond the left of the screen
 
 "" Per project vimrc
 set exrc
