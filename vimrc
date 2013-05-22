@@ -168,7 +168,7 @@ map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
 
 "" Plugins configuration
-let g:ctrlp_map = '<leader>l'
+let g:ctrlp_map = '<leader>f'
 map <leader>- :CtrlPBufTag<CR>
 map <leader>. :CtrlPBuffer<CR>
 let g:ctrlp_match_window_reversed = 0
