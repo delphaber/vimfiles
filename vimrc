@@ -148,12 +148,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
-" disable cursor keys in normal mode
-map <Left>  :echo "no!"<CR>
-map <Right> :echo "no!"<CR>
-map <Up>    :echo "no!"<CR>
-map <Down>  :echo "no!"<CR>
-
 "" Fugitive
 map <Leader>gs  :Gstatus<CR>
 map <Leader>gd  :Gdiff<CR>
@@ -166,6 +160,7 @@ map <silent> <S-left> <Esc>:bp<CR>
 map <silent> <S-right> <Esc>:bn<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 "" Plugins configuration
 let g:ctrlp_map = '<leader>f'
@@ -179,6 +174,7 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:Powerline_symbols = 'fancy'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 "" Testing helpers
 function! RunTests(filename)
