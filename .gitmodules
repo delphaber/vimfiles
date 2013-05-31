@@ -91,3 +91,6 @@
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = git@github.com:tpope/vim-abolish.git
+[submodule "bundle/mediummode"]
+	path = bundle/mediummode
+	url = git@github.com:kbarrette/mediummode.git
