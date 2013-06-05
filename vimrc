@@ -161,6 +161,9 @@ map <silent> <S-right> <Esc>:bn<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
 
+"" Bad behaviours
+xnoremap u <Nop>
+
 "" Plugins configuration
 let g:ctrlp_map = '<leader>f'
 map <leader>- :CtrlPBufTag<CR>
