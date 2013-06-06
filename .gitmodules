@@ -94,3 +94,6 @@
 [submodule "bundle/vim-indent-object"]
 	path = bundle/vim-indent-object
 	url = git@github.com:michaeljsmith/vim-indent-object.git
+[submodule "bundle/mediummode"]
+	path = bundle/mediummode
+	url = git@github.com:delphaber/mediummode.git
