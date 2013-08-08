@@ -39,7 +39,7 @@ set autoindent                    " keep indentation level when no indent is fou
 "" Wild life
 set wildmenu                      " wildmenu gives autocompletion to vim
 set wildmode=list:longest,full    " autocompletion shouldn't jump to the first match
-set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.csv,*.pyc,*.xls
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.pyc,*.xls
 
 "" List chars
 set listchars=""                  " reset the listchars
