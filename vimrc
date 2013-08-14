@@ -160,6 +160,7 @@ map <silent> <S-left> <Esc>:bp<CR>
 map <silent> <S-right> <Esc>:bn<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
+vmap <Leader>z :call I18nTranslateString()<CR>
 
 "" Bad behaviours
 xnoremap u <Nop>
