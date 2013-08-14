@@ -219,5 +219,7 @@ map <leader>T :call RunNearestTest()<cr>
 " Run all test files
 map <leader>A :call RunTests('spec')<cr>
 
-" Ruby && Rails commodities
+" Convert hashrockets into new 1.9 hash syntax
 noremap <leader>rr :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>
+" Remove space inside square brackets
+noremap <leader>zz :%s/\[\s\+\([^\]]\+\)\s\+\]/[\1]/ge<CR><C-o>
