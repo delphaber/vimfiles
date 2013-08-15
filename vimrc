@@ -99,6 +99,12 @@ if has("autocmd")
     \ endif
 endif
 
+"" GO
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+
 "" Backup and status line
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
