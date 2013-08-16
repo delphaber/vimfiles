@@ -117,7 +117,9 @@ let mapleader=","
 nnoremap K <nop>
 
 " y u consistent?
-nnoremap Y y$
+function! YRRunAfterMaps()
+  nnoremap <silent> Y :<C-U>YRYankCount 'y$'<CR>
+endfunction
 
 " clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<CR>
