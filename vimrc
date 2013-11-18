@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 
 "" Sane defaults
 set encoding=utf-8
