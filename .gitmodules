@@ -100,3 +100,6 @@
 [submodule "bundle/vim-quickfixdo"]
 	path = bundle/vim-quickfixdo
 	url = git://github.com/Arkham/vim-quickfixdo.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git@github.com:joonty/vdebug.git

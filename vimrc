@@ -185,6 +185,7 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:Powerline_symbols = 'fancy'
+let g:vdebug_options = { "break_on_open" : 0 }
 
 "" Testing helpers
 function! RunTests(filename)
