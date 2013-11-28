@@ -170,6 +170,9 @@ map <silent> <S-right> <Esc>:bn<CR>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
 vmap <Leader>z :call I18nTranslateString()<CR>
+nnoremap <leader>t :call RunCurrentSpecFile()<cr>
+nnoremap <leader>T :call RunNearestSpec()<cr>
+nnoremap <leader>A :call RunAllSpecs()<cr>
 
 "" Bad behaviours
 xnoremap u <Nop>
@@ -187,48 +190,7 @@ let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:Powerline_symbols = 'fancy'
 let g:vdebug_options = { "break_on_open" : 0 }
-
-"" Testing helpers
-function! RunTests(filename)
-    " Write the file and run tests for the given filename
-    :w
-    :silent !echo;echo;echo;echo;echo
-    exec ":!rspec " . a:filename
-endfunction
-
-function! SetTestFile()
-    " Set the spec file that tests will be run for.
-    let t:grb_test_file=@%
-endfunction
-
-function! RunTestFile(...)
-    if a:0
-        let command_suffix = a:1
-    else
-        let command_suffix = ""
-    endif
-
-    " Run the tests for the previously-marked file.
-    let in_spec_file = match(expand("%"), '_spec.rb$') != -1
-    if in_spec_file
-        call SetTestFile()
-    elseif !exists("t:grb_test_file")
-        return
-    end
-    call RunTests(t:grb_test_file . command_suffix)
-endfunction
-
-function! RunNearestTest()
-    let spec_line_number = line('.')
-    call RunTestFile(":" . spec_line_number)
-endfunction
-
-" Run this file
-map <leader>t :call RunTestFile()<cr>
-" Run only the example under the cursor
-map <leader>T :call RunNearestTest()<cr>
-" Run all test files
-map <leader>A :call RunTests('spec')<cr>
+let g:rspec_command="!t {spec}"
 
 " Convert hashrockets into new 1.9 hash syntax
 noremap <leader>rr :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>

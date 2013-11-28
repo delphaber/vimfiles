@@ -103,3 +103,6 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = git@github.com:joonty/vdebug.git
+[submodule "bundle/vim-rspec"]
+	path = bundle/vim-rspec
+	url = git@github.com:thoughtbot/vim-rspec.git
