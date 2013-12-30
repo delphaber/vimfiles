@@ -193,6 +193,8 @@ let g:vdebug_options = { "break_on_open" : 0 }
 let g:rspec_command="!t {spec}"
 
 " Convert hashrockets into new 1.9 hash syntax
-noremap <leader>rr :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-o>
+noremap <leader>rr :ConvertRubyHash<CR>
+command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
+
 " Remove space inside square brackets
 noremap <leader>zz :%s/\[\s\+\([^\]]\+\)\s\+\]/[\1]/ge<CR><C-o>
