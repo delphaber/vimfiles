@@ -82,9 +82,6 @@
 [submodule "bundle/vim-stylus"]
 	path = bundle/vim-stylus
 	url = git@github.com:wavded/vim-stylus.git
-[submodule "bundle/yank-ring"]
-	path = bundle/yank-ring
-	url = git@github.com:vim-scripts/YankRing.vim.git
 [submodule "bundle/vim-powerline-deprecated"]
 	path = bundle/vim-powerline-deprecated
 	url = git@github.com:delphaber/vim-powerline.git
