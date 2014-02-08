@@ -100,12 +100,6 @@ if has("autocmd")
     \ endif
 endif
 
-"" GO
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-
 "" Backup and status line
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
@@ -156,13 +150,6 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
-
-"" Fugitive
-map <Leader>gs  :Gstatus<CR>
-map <Leader>gd  :Gdiff<CR>
-map <Leader>gci :Gcommit<CR>
-map <Leader>gw  :Gwrite<CR>
-map <Leader>gr  :Gread<CR>
 
 "" Plugins mapping
 map <silent> <S-left> <Esc>:bp<CR>
