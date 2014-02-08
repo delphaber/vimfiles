@@ -183,5 +183,12 @@ let g:rspec_command="!t {spec}"
 noremap <leader>rr :ConvertRubyHash<CR>
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
 
+" Smart Home and Smart End
+noremap <expr> <Home> (col('.') == matchend(getline('.'), '^\s*')+1 ? '0' : '^')
+noremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$' : 'g_')
+vnoremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$h' : 'g_')
+imap <Home> <C-o><Home>
+imap <End> <C-o><End>
+
 " Remove space inside square brackets
 noremap <leader>zz :%s/\[\s\+\([^\]]\+\)\s\+\]/[\1]/ge<CR><C-o>
