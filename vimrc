@@ -134,9 +134,6 @@ nmap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 " toggle list mode
 nmap <silent> <Leader>s :set nolist!<CR>
 
-" copy current path
-nmap <silent> <Leader>p :let @* = expand("%")<CR>
-
 " easy substitutions
 nmap <Leader>r :%s///gc<Left><Left><Left><Left>
 nmap <Leader>R :%s:::gc<Left><Left><Left><Left>
