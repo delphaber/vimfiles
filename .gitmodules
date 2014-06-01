@@ -97,9 +97,6 @@
 [submodule "bundle/vim-quickfixdo"]
 	path = bundle/vim-quickfixdo
 	url = https://github.com/Arkham/vim-quickfixdo.git
-[submodule "bundle/vdebug"]
-	path = bundle/vdebug
-	url = https://github.com/joonty/vdebug.git
 [submodule "bundle/vim-rspec"]
 	path = bundle/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
