@@ -76,9 +76,6 @@
 [submodule "bundle/ack-vim"]
 	path = bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/vim-stylus"]
 	path = bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
