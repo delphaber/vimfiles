@@ -175,6 +175,9 @@ let g:ctrlp_root_markers = ['root.dir']
 let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
+let g:yankstack_map_keys = 0
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-P> <Plug>yankstack_substitute_newer_paste
 
 " Convert hashrockets into new 1.9 hash syntax
 noremap <leader>rr :ConvertRubyHash<CR>
