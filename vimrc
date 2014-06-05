@@ -1,5 +1,6 @@
 call pathogen#infect()
 call pathogen#helptags()
+call yankstack#setup()
 
 "" Sane defaults
 set encoding=utf-8
@@ -112,9 +113,7 @@ let mapleader=","
 nnoremap K <nop>
 
 " y u consistent?
-function! YRRunAfterMaps()
-  nnoremap <silent> Y :<C-U>YRYankCount 'y$'<CR>
-endfunction
+nmap <silent> Y y$
 
 " clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<CR>
