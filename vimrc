@@ -177,7 +177,6 @@ nmap <C-n> <Plug>yankstack_substitute_newer_paste
 " let g:syntastic_mode_map = { 'mode': 'passive' }
 
 " Convert hashrockets into new 1.9 hash syntax
-noremap <leader>rr :ConvertRubyHash<CR>
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
 
 " Smart Home and Smart End
