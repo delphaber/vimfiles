@@ -14,6 +14,7 @@ set pastetoggle=<F12>             " for pasting code into Vim
 
 "" Style
 set background=dark
+let g:rehash256 = 1
 color molokai
 set number                        " line numbers are cool
 set relativenumber                " relative numbers
