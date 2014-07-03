@@ -149,14 +149,20 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
 "" Plugins mapping
-map <silent> <S-left> <Esc>:bp<CR>
-map <silent> <S-right> <Esc>:bn<CR>
-map <Leader>n :NERDTreeToggle<CR>
 map <Leader>u :GundoToggle<CR>
 vmap <Leader>z :call I18nTranslateString()<CR>
-nnoremap <leader>t :call RunCurrentSpecFile()<cr>
-nnoremap <leader>T :call RunNearestSpec()<cr>
-nnoremap <leader>A :call RunAllSpecs()<cr>
+
+nnoremap <leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <leader>T :call RunNearestSpec()<CR>
+nnoremap <leader>A :call RunAllSpecs()<CR>
+
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-n> <Plug>yankstack_substitute_newer_paste
+
+map <Leader>n :NERDTreeToggle<CR>
+map  <S-L> :tabn<CR>
+map  <S-H> :tabp<CR>
+map  <S-N> :tabnew<CR>
 
 "" Bad behaviours
 xnoremap u <Nop>
@@ -173,9 +179,6 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:yankstack_map_keys = 0
-nmap <C-p> <Plug>yankstack_substitute_older_paste
-nmap <C-n> <Plug>yankstack_substitute_newer_paste
-" let g:syntastic_mode_map = { 'mode': 'passive' }
 
 " Convert hashrockets into new 1.9 hash syntax
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
