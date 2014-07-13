@@ -160,9 +160,9 @@ nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 
 map <Leader>n :NERDTreeToggle<CR>
-map  <S-L> :tabn<CR>
-map  <S-H> :tabp<CR>
-map  <S-N> :tabnew<CR>
+" map  <S-L> :tabn<CR>
+" map  <S-H> :tabp<CR>
+" map  <S-N> :tabnew<CR>
 
 "" Bad behaviours
 xnoremap u <Nop>
