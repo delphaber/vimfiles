@@ -42,7 +42,8 @@ set autoindent                    " keep indentation level when no indent is fou
 "" Wild life
 set wildmenu                      " wildmenu gives autocompletion to vim
 set wildmode=list:longest,full    " autocompletion shouldn't jump to the first match
-set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc,*.pyc,*.xls
+set wildignore+=*.scssc,*.sassc,*.pyc,*.xls
+set wildignore+=.git/**,.hg/**,.svn/**,.sass-cache/**,tmp/**,node_modules/**
 
 "" List chars
 set listchars=""                  " reset the listchars
@@ -171,8 +172,7 @@ xnoremap u <Nop>
 let g:ctrlp_map = '<leader>f'
 map <leader>- :CtrlPBufTag<CR>
 map <leader>. :CtrlPBuffer<CR>
-let g:ctrlp_match_window_reversed = 0
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/tmp/*,*/node_modules/*
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_extensions = ['buffertag']
 let g:ctrlp_root_markers = ['root.dir']
 let g:NERDTreeMouseMode = 3
