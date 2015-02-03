@@ -87,6 +87,8 @@ if has("autocmd")
   " treat JSON files like JavaScript
   au BufNewFile,BufRead *.json setf javascript
 
+  au BufNewFIle,BufRead *.html.slim.deface setf slim
+
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
   au FileType python,htmldjango setl sts=4 ts=4 sw=4
 
