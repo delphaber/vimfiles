@@ -184,6 +184,8 @@ let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:yankstack_map_keys = 0
 let g:airline_powerline_fonts = 1
+let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "Dispatch rspec {spec}"
 
 " Convert hashrockets into new 1.9 hash syntax
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>

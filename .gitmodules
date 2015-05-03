@@ -103,3 +103,6 @@
 [submodule "bundle/vim-visualstar"]
 	path = bundle/vim-visualstar
 	url = https://github.com/thinca/vim-visualstar.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
