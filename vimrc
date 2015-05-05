@@ -27,7 +27,11 @@ set hidden                        " Allow backgrounding buffers without writing 
                                   " remember marks/undo for backgrounded buffers
 "" Mouse
 set nomousehide                   " fix problem with cursor and ubuntu?
-set mouse=a                       " we love the mouse
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 "" Whitespace
 set nowrap                        " don't wrap lines
