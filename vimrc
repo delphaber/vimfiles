@@ -190,7 +190,7 @@ let g:yankstack_map_keys = 0
 let g:airline_powerline_fonts = 1
 let g:rspec_runner = "os_x_iterm"
 " let g:rspec_command = "Dispatch rspec {spec}"
-let g:vimrubocop_config = './.rubocop.yml'
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Convert hashrockets into new 1.9 hash syntax
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
