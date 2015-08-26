@@ -58,10 +58,6 @@ set listchars+=extends:>          " the character to show in the last column whe
 set listchars+=precedes:<         " the character to show in the first column when wrap is
                                   " off and the line continues beyond the left of the screen
 
-"" Per project vimrc
-set exrc
-set secure
-
 "" Searching
 set hlsearch                      " highlight matches
 set incsearch                     " incremental searching
@@ -169,9 +165,6 @@ nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-n> <Plug>yankstack_substitute_newer_paste
 
 map <Leader>n :NERDTreeToggle<CR>
-" map  <S-L> :tabn<CR>
-" map  <S-H> :tabp<CR>
-" map  <S-N> :tabnew<CR>
 
 "" Bad behaviours
 xnoremap u <Nop>
@@ -188,8 +181,6 @@ let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:yankstack_map_keys = 0
 let g:airline_powerline_fonts = 1
-let g:rspec_runner = "os_x_iterm"
-" let g:rspec_command = "Dispatch rspec {spec}"
 let g:syntastic_ruby_checkers = ['rubocop']
 
 " Convert hashrockets into new 1.9 hash syntax
