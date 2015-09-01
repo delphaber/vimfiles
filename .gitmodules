@@ -124,3 +124,6 @@
 [submodule "bundle/vim-elixir"]
 	path = bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "bundle/vim-local-vimrc"]
+	path = bundle/vim-local-vimrc
+	url = https://github.com/MarcWeber/vim-addon-local-vimrc.git
