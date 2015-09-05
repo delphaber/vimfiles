@@ -182,6 +182,7 @@ let g:gundo_right = 1
 let g:yankstack_map_keys = 0
 let g:airline_powerline_fonts = 1
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_scss_checkers = ['scss_lint']
 let delimitMate_expand_space = 1
 
 " Convert hashrockets into new 1.9 hash syntax
