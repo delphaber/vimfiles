@@ -124,3 +124,6 @@
 [submodule "bundle/vim-local-vimrc"]
 	path = bundle/vim-local-vimrc
 	url = https://github.com/MarcWeber/vim-addon-local-vimrc.git
+[submodule "bundle/vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
