@@ -1,14 +1,52 @@
-call pathogen#infect()
-call pathogen#helptags()
-call yankstack#setup()
+set nocompatible
+filetype off
 
-"" Sane defaults
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ap/vim-css-color'
+Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'godlygeek/tabular'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'marcweber/vim-addon-local-vimrc'
+Plugin 'mattreduce/vim-mix'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'mileszs/ack.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'pangloss/vim-javascript'
+Plugin 'raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'shougo/neocomplete.vim.git'
+Plugin 'slim-template/vim-slim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'thinca/vim-visualstar'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tomasr/molokai'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
+
+call vundle#end()
+
+filetype plugin indent on
 set encoding=utf-8
 let &t_Co=256                     " moar colors
 set clipboard=unnamed             " use system clipboard
-set nocompatible                  " nocompatible is good for humans
 syntax enable                     " enable syntax highlighting...
-filetype plugin indent on         " depending on filetypes...
 runtime macros/matchit.vim        " with advanced matching capabilities
 set pastetoggle=<F12>             " for pasting code into Vim
 
@@ -180,7 +218,6 @@ let g:NERDTreeMouseMode = 3
 let g:NERDTreeHighlightCursorline = 0
 let g:gundo_right = 1
 let g:yankstack_map_keys = 0
-let g:airline_powerline_fonts = 1
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_scss_checkers = ['scss_lint']
 let delimitMate_expand_space = 1
