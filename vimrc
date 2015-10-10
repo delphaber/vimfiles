@@ -17,6 +17,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'marcweber/vim-addon-local-vimrc'
 Plugin 'mattreduce/vim-mix'
 Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'mbbill/undotree'
 Plugin 'mileszs/ack.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
@@ -226,7 +227,7 @@ let g:yankstack_map_keys = 0
 let g:syntastic_ruby_checkers = ['rubocop']
 let delimitMate_expand_space = 1
 
-" Easy Motion
+" easymotion/vim-easymotion
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_startofline = 0 " 
 map <Leader>. <Plug>(easymotion-prefix)
@@ -235,3 +236,9 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+" mmbill/undotree
+if has("persistent_undo")
+  set undodir='~/.undodir/'
+  set undofile
+endif
