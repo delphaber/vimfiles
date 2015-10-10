@@ -40,6 +40,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
@@ -172,9 +173,6 @@ map <Leader>e :e %%
 
 " easy way to switch between latest files
 nnoremap <Leader><Leader> <C-^>
-
-" find merge conflict markers
-nmap <silent> <Leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 " toggle list mode
 nmap <silent> <Leader>s :set nolist!<CR>
