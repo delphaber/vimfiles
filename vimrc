@@ -10,6 +10,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'godlygeek/tabular'
 Plugin 'kchmck/vim-coffee-script'
@@ -105,10 +106,10 @@ set smartcase                     " unless they contain at least one capital let
 "" Windows
 set splitright                    " create new horizontal split on the right
 set splitbelow                    " create new vertical split below the current window
-" set winheight=5                   " set winheight to low number...
-" set winminheight=5                " or this will fail
-" set winheight=999
-" set winwidth=84
+set winheight=5                   " set winheight to low number...
+set winminheight=5                " or this will fail
+set winheight=999
+set winwidth=84
 
 "" Other 
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slight delay after pressing ESC then O
@@ -191,10 +192,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 
-"" Plugins mapping
-map <Leader>u :GundoToggle<CR>
-vmap <Leader>z :call I18nTranslateString()<CR>
-
 nnoremap <leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <leader>T :call RunNearestSpec()<CR>
 nnoremap <leader>A :call RunAllSpecs()<CR>
@@ -207,21 +204,6 @@ map <Leader>n :NERDTreeToggle<CR>
 "" Bad behaviours
 xnoremap u <Nop>
 
-"" Plugins configuration
-let g:ctrlp_map = '<leader>f'
-map <leader>- :CtrlPBufTag<CR>
-map <leader>. :CtrlPBuffer<CR>
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_extensions = ['buffertag']
-let g:ctrlp_root_markers = ['root.dir']
-let g:NERDTreeMouseMode = 3
-let g:NERDTreeHighlightCursorline = 0
-let g:gundo_right = 1
-let g:yankstack_map_keys = 0
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_scss_checkers = ['scss_lint']
-let delimitMate_expand_space = 1
-
 " Convert hashrockets into new 1.9 hash syntax
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
 
@@ -232,5 +214,24 @@ vnoremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$h' : 'g_')
 imap <Home> <C-o><Home>
 imap <End> <C-o><End>
 
-" Remove space inside square brackets
-noremap <leader>zz :%s/\[\s\+\([^\]]\+\)\s\+\]/[\1]/ge<CR><C-o>
+" Plugins configuration
+" =====================
+
+" Ctrl P
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:NERDTreeMouseMode = 3
+let g:NERDTreeHighlightCursorline = 0
+let g:yankstack_map_keys = 0
+let g:syntastic_ruby_checkers = ['rubocop']
+let delimitMate_expand_space = 1
+
+" Easy Motion
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_startofline = 0 " 
+map <Leader>. <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
