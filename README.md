@@ -1,7 +1,7 @@
 My vim configuration
 ==========================
 
-FORKED FROM: https://github.com/stefanoverna/vimfiles
+Thanks to (stefanoverna)[https://github.com/stefanoverna] and (Arkham)[https://github.com/Arkham]
 
 ## Installation:
 
