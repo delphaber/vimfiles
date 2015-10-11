@@ -1,7 +1,7 @@
 My vim configuration
 ==========================
 
-Thanks to (stefanoverna)[https://github.com/stefanoverna] and (Arkham)[https://github.com/Arkham]
+Thanks to [stefanoverna](https://github.com/stefanoverna) and [Arkham](https://github.com/Arkham)
 
 ## Installation:
 
