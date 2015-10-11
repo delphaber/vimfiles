@@ -204,13 +204,6 @@ xnoremap u <Nop>
 " Convert hashrockets into new 1.9 hash syntax
 command! ConvertRubyHash :normal :%s/:\(\w\+\)\s*=>/\1:/ge<CR><C-O><CR>
 
-" Smart Home and Smart End
-noremap <expr> <Home> (col('.') == matchend(getline('.'), '^\s*')+1 ? '0' : '^')
-noremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$' : 'g_')
-vnoremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$h' : 'g_')
-imap <Home> <C-o><Home>
-imap <End> <C-o><End>
-
 " Plugins configuration
 " =====================
 
