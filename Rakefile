@@ -1,16 +1,5 @@
-task :default => [:init_submodules, :link]
-
-task :init_submodules do
-  sh "git submodule update --init"
-end
-
-task :update do
-  sh "git pull origin master"
-  sh "git submodule foreach 'git checkout master && git pull'"
-end
-
 task :link do
-  %w[vimrc gvimrc].each do |script|
+  %w[vimrc].each do |script|
     dotfile = File.join(ENV['HOME'], ".#{script}")
     if File.exist? dotfile
       warn "~/.#{script} already exists"
@@ -19,3 +8,5 @@ task :link do
     end
   end
 end
+
+task :default => [:link]
