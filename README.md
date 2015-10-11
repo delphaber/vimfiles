@@ -16,6 +16,3 @@ Prerequisites: `ruby`, `git`
 
 This will install `~/.vimrc` and `~/.gvimrc` symlinks that point to
 files inside the `.vim` directory.
-
-To add a plugin, do e.g.:
-    `git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive`
