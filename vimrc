@@ -51,15 +51,15 @@
 " General {{{
   filetype plugin indent on
   syntax on
-  set mouse=a
-  set encoding=utf-8
-  set clipboard=unnamed
-  set hidden                        " Allow backgrounding buffers without writing them, and
-  set timeout timeoutlen=1000 ttimeoutlen=100 " fix slight delay after pressing ESC then O
-  set autoread " auto reload buffer if file has been changed
-  set backupdir=~/.vim/_backup    " where to put backup files.
-  set directory=~/.vim/_temp      " where to put swap files.
-  set tags+=gems.tags
+  set mouse=a                                 " enable the use of the mouse in all modes
+  set encoding=utf-8                          " sets the character encoding used inside Vim
+  set clipboard=unnamed                       " use unnamed register on MAC OS
+  set hidden                                  " allow backgrounding buffers without writing them
+  set timeout timeoutlen=1000 ttimeoutlen=100 " fix delay after pressing ESC
+  set autoread                                " auto reload buffer if file has been changed
+  set backupdir=~/.vim/_backup                " where to put backup files.
+  set directory=~/.vim/_temp                  " where to put swap files.
+  set tags+=gems.tags                         " include gems.tags to tags files
   runtime macros/matchit.vim
 " }}}
 
@@ -68,40 +68,39 @@
   let g:rehash256 = 1
   set background=dark
 
-  set cursorline
-  set noshowmode
-  set showcmd                       " show (partial) command in the last line of the screen.
-  set number                        " precede each line with its line
-  set backspace=indent,eol,start    " backspace through everything in insert mode
-  set laststatus=2
+  set cursorline                  " highlight the screen line of the cursor
+  set noshowmode                  " do not show vim mode in the last line of the screen
+  set showcmd                     " show (partial) command in the last line of the screen
+  set number                      " precede each line with its line
+  set backspace=indent,eol,start  " backspace through everything in insert mode
+  set laststatus=2                " always show a status line
 
-  set incsearch                     " incremental searching
-  set hlsearch                      " highlight matches
-  set ignorecase                    " searches are case insensitive...
-  set smartcase                     " unless they contain at least one capital letter
+  set incsearch  " incremental searching
+  set hlsearch   " highlight matches
+  set ignorecase " searches are case insensitive...
+  set smartcase  " unless they contain at least one capital letter
 
-  set wildmenu                      " wildmenu gives autocompletion to vim
-  set wildmode=list:longest,full    " autocompletion shouldn't jump to the first match
+  set wildmenu                    " enable command-line completion
+  set wildmode=list:longest,full  " autocompletion shouldn't jump to the first match
   set wildignore+=.git/**,.svn/**,.sass-cache/**,tmp/**,node_modules/**
 
-  set scrolljump=5                " Lines to scroll when cursor leaves screen
-  set scrolloff=5                 " Minimum lines to keep above and below cursor
+  set scrolljump=5 " minimal number of lines to scroll when the cursor gets off the screen
+  set scrolloff=5  " minimal number of screen lines to keep above and below the cursor
+  set splitright   " puts new vsplit windows to the right of the current
+  set splitbelow   " puts new split windows to the bottom of the current
 
-  set splitright                  " Puts new vsplit windows to the right of the current
-  set splitbelow                  " Puts new split windows to the bottom of the current
-
-  set list                          " show invisible characters
-  set listchars=tab:›\ ,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
+  set list                                       " show invisible characters
+  set listchars=tab:›\ ,trail:.,extends:#,nbsp:. " highlight problematic whitespace
 " }}}
 
 " Formatting {{{
-  set nowrap                      " Do not wrap long lines
-  set autoindent                  " Indent at the same level of the previous line
-  set shiftwidth=2                " Use indents of 4 spaces
-  set expandtab                   " Tabs are spaces, not tabs
-  set tabstop=2                   " An indentation every four columns
-  set softtabstop=2               " Let backspace delete indent
-  set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+  set nowrap                      " do not wrap long lines
+  set autoindent                  " indent at the same level of the previous line
+  set shiftwidth=2                " use indents of 2 spaces
+  set expandtab                   " tabs are spaces, not tabs
+  set tabstop=2                   " an indentation every 2 columns
+  set softtabstop=2               " let backspace delete indent
+  set nojoinspaces                " prevents inserting two spaces after punctuation on a join (J)
   set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 
   if has("autocmd")
