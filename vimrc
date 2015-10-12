@@ -89,6 +89,12 @@
   set splitright   " puts new vsplit windows to the right of the current
   set splitbelow   " puts new split windows to the bottom of the current
 
+  " allow window resize while in tmux
+  if &term =~ '^screen'
+      " tmux knows the extended mouse mode
+      set ttymouse=xterm2
+  endif
+
   set list                                       " show invisible characters
   set listchars=tab:›\ ,trail:.,extends:#,nbsp:. " highlight problematic whitespace
 " }}}
