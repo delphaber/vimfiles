@@ -59,6 +59,7 @@
   set autoread " auto reload buffer if file has been changed
   set backupdir=~/.vim/_backup    " where to put backup files.
   set directory=~/.vim/_temp      " where to put swap files.
+  set tags+=gems.tags
   runtime macros/matchit.vim
 " }}}
 
