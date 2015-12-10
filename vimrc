@@ -119,6 +119,7 @@
     " spree deface support
     au BufNewFile,BufRead *.html.erb.deface setf eruby
     au BufNewFile,BufRead *.html.slim.deface setf slim
+    au BufNewFile,BufRead *.js.coffee.erb setf coffee
 
     " delete Fugitive buffers when they become inactive
     au BufReadPost fugitive://* set bufhidden=delete
