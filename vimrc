@@ -22,9 +22,10 @@
   Plugin 'mattreduce/vim-mix'
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
+  Plugin 'mxw/vim-jsx'
   Plugin 'nathanaelkane/vim-indent-guides'
-  Plugin 'pangloss/vim-javascript'
   Plugin 'othree/javascript-libraries-syntax.vim'
+  Plugin 'pangloss/vim-javascript'
   Plugin 'raimondi/delimitMate'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic'
@@ -245,6 +246,7 @@
   let g:syntastic_ruby_checkers = ['rubocop']
   let delimitMate_expand_space = 1
   let g:used_javascript_libs = 'uderscore,jquery,angularjs,react'
+  let g:jsx_ext_required = 0
 " }}}
 
 " vim: foldmarker={{{,}}} foldlevel=0 foldmethod=marker
