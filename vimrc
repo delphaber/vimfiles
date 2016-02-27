@@ -12,7 +12,6 @@
   Plugin 'bling/vim-airline'
   Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'easymotion/vim-easymotion'
   Plugin 'elixir-lang/vim-elixir'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
@@ -225,17 +224,6 @@
   " airline {{{
     let g:airline_left_sep='›'
     let g:airline_right_sep='‹'
-  " }}}
-
-  " easymotion {{{
-    let g:EasyMotion_smartcase = 1
-    let g:EasyMotion_startofline = 0 " 
-    map <Leader>. <Plug>(easymotion-prefix)
-    nmap s <Plug>(easymotion-s2)
-    map <Leader>j <Plug>(easymotion-j)
-    map <Leader>k <Plug>(easymotion-k)
-    map  / <Plug>(easymotion-sn)
-    omap / <Plug>(easymotion-tn)
   " }}}
 
   " indent guides {{{
