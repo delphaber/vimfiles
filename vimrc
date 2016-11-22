@@ -10,20 +10,14 @@
   " Plugin 'shougo/neocomplete.vim'
   Plugin 'ap/vim-css-color'
   Plugin 'bling/vim-airline'
-  Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'elixir-lang/vim-elixir'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
   Plugin 'kchmck/vim-coffee-script'
-  Plugin 'majutsushi/tagbar'
   Plugin 'marcweber/vim-addon-local-vimrc'
-  Plugin 'mattreduce/vim-mix'
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
-  Plugin 'mxw/vim-jsx'
   Plugin 'nathanaelkane/vim-indent-guides'
-  Plugin 'othree/javascript-libraries-syntax.vim'
   Plugin 'pangloss/vim-javascript'
   Plugin 'raimondi/delimitMate'
   Plugin 'scrooloose/nerdtree'
@@ -233,8 +227,7 @@
 
   let g:syntastic_ruby_checkers = ['rubocop']
   let delimitMate_expand_space = 1
-  let g:used_javascript_libs = 'uderscore,jquery,angularjs,react'
-  let g:jsx_ext_required = 0
+  let g:used_javascript_libs = 'uderscore,jquery,angularjs'
 " }}}
 
 function! DoPrettyXML()
