@@ -7,35 +7,35 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-  " Plugin 'shougo/neocomplete.vim'
-  Plugin 'ap/vim-css-color'
+  " Plugin 'tpope/vim-haml'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'delphaber/vim-slim'
+  Plugin 'digitaltoad/vim-pug'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
+  Plugin 'janko-m/vim-test'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'marcweber/vim-addon-local-vimrc'
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'pangloss/vim-javascript'
-  Plugin 'raimondi/delimitMate'
+  Plugin 'posva/vim-vue'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic'
-  Plugin 'slim-template/vim-slim'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'thinca/vim-visualstar'
-  Plugin 'thoughtbot/vim-rspec'
   Plugin 'tomasr/molokai'
   Plugin 'tpope/vim-abolish'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-endwise'
   Plugin 'tpope/vim-eunuch'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'tpope/vim-haml'
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-rails'
   Plugin 'tpope/vim-repeat'
+  Plugin 'tpope/vim-rhubarb'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'vim-ruby/vim-ruby'
@@ -192,10 +192,11 @@
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
   " }}}
 
-  " Rspec {{{
-    nnoremap <leader>t :call RunCurrentSpecFile()<CR>
-    nnoremap <leader>T :call RunNearestSpec()<CR>
-    nnoremap <leader>A :call RunAllSpecs()<CR>
+  " Vim-Test {{{
+    nnoremap <leader>t :wa<CR>\|:TestFile<CR>
+    nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
+    let g:test#preserve_screen = 1
+    let g:test#strategy = "neovim"
   " }}}
 
   " Yankstack {{{
