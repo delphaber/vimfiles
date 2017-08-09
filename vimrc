@@ -47,10 +47,13 @@
   filetype plugin indent on
   syntax on
   set mouse=a                                 " enable the use of the mouse in all modes
+  if !has('nvim')
+    set ttymouse=xterm2                       " and we want it to be fast
+  endif
   set encoding=utf-8                          " sets the character encoding used inside Vim
   set clipboard=unnamed                       " use unnamed register on MAC OS
   set hidden                                  " allow backgrounding buffers without writing them
-  set timeout timeoutlen=1000 ttimeoutlen=100 " fix delay after pressing ESC
+  set timeout timeoutlen=1000 ttimeoutlen=10  " fix delay after pressing ESC
   set autoread                                " auto reload buffer if file has been changed
   set backupdir=~/.vim/_backup                " where to put backup files.
   set directory=~/.vim/_temp                  " where to put swap files.
@@ -218,6 +221,11 @@
   " indent guides {{{
   let g:indent_guides_start_level = 2
   let g:indent_guides_guide_size = 1
+
+  " neovim compatibility
+  let g:indent_guides_auto_colors = 0
+  hi IndentGuidesOdd  guibg=red   ctermbg=3
+  hi IndentGuidesEven guibg=green ctermbg=4
   " }}}
 
   let g:syntastic_ruby_checkers = ['rubocop']
