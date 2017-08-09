@@ -55,9 +55,8 @@
   set hidden                                  " allow backgrounding buffers without writing them
   set timeout timeoutlen=1000 ttimeoutlen=10  " fix delay after pressing ESC
   set autoread                                " auto reload buffer if file has been changed
-  set backupdir=~/.vim/_backup                " where to put backup files.
-  set directory=~/.vim/_temp                  " where to put swap files.
-  set tags+=gems.tags                         " include gems.tags to tags files
+  set nobackup                                " disable backup files...
+  set noswapfile                              " and swap files
   runtime macros/matchit.vim
 " }}}
 
