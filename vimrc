@@ -100,6 +100,11 @@
   set nojoinspaces                " prevents inserting two spaces after punctuation on a join (J)
   set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 
+  set foldmethod=syntax
+  set foldnestmax=10
+  set nofoldenable
+  set foldlevel=2
+
   if has("autocmd")
     " make sure all markdown files have the correct filetype set and setup wrapping
     au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
