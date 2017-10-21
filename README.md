@@ -26,3 +26,5 @@ Prerequisites: `vim` (7.4+), `git`
 5. On install complete, quit vim and open it again.
 
 6. Profit!
+
+7. If you want to use neovim, follow install instruction and read [this](https://neovim.io/doc/user/nvim.html#nvim-from-vim)
