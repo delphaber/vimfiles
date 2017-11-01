@@ -8,6 +8,7 @@
   Plugin 'VundleVim/Vundle.vim'
 
   " Plugin 'tpope/vim-haml'
+  Plugin 'benmills/vimux'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'delphaber/vim-slim'
@@ -23,7 +24,6 @@
   Plugin 'pangloss/vim-javascript'
   Plugin 'posva/vim-vue'
   Plugin 'scrooloose/nerdtree'
-  Plugin 'scrooloose/syntastic'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'thinca/vim-visualstar'
   Plugin 'tomasr/molokai'
@@ -39,6 +39,7 @@
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'vim-ruby/vim-ruby'
+  Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
 
   call vundle#end()
 " }}}
@@ -197,7 +198,8 @@
     nnoremap <leader>t :wa<CR>\|:TestFile<CR>
     nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
     let g:test#preserve_screen = 1
-    let g:test#strategy = "neovim"
+    " let g:test#strategy = "neovim"
+    let g:test#strategy = "vimux"
   " }}}
 
   " Yankstack {{{
@@ -233,7 +235,14 @@
   hi IndentGuidesEven guibg=green ctermbg=4
   " }}}
 
-  let g:syntastic_ruby_checkers = ['rubocop']
+  " ale
+  let g:airline#extensions#ale#enabled = 1
+  " Write this in your vimrc file
+  let g:ale_lint_on_text_changed = 'never'
+  " You can disable this option too
+  " if you don't want linters to run on opening a file
+  let g:ale_lint_on_enter = 0
+
   let delimitMate_expand_space = 1
   let g:used_javascript_libs = 'uderscore,jquery,angularjs'
 " }}}
