@@ -9,6 +9,7 @@
 
   " Plugin 'tpope/vim-haml'
   Plugin 'benmills/vimux'
+  Plugin 'bkad/CamelCaseMotion'
   Plugin 'bling/vim-airline'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'delphaber/vim-slim'
@@ -253,6 +254,7 @@
 
   let delimitMate_expand_space = 1
   let g:used_javascript_libs = 'uderscore,jquery,angularjs'
+  call camelcasemotion#CreateMotionMappings('<leader>')
 " }}}
 
 function! DoPrettyXML()
