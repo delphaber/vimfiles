@@ -13,6 +13,7 @@
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'delphaber/vim-slim'
   Plugin 'digitaltoad/vim-pug'
+  Plugin 'elixir-editors/vim-elixir'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
   Plugin 'janko-m/vim-test'
@@ -131,6 +132,13 @@
       \ endif
   endif
 " }}}
+
+  " disable endwise for anonymous functions
+  augroup filetype_elixir_endwise
+    au!
+    au BufNewFile,BufRead *.{ex,exs}
+          \ let b:endwise_addition = '\=submatch(0)=="fn" ? "end)" : "end"'
+  augroup END
 
 " General mappings {{{
   let mapleader=","
