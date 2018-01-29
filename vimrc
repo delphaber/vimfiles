@@ -218,10 +218,12 @@
   " }}}
 
   " Vim-Test {{{
-    nnoremap <leader>t :wa<CR>\|:TestFile<CR>
-    nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
-    let g:test#preserve_screen = 1
-    " let g:test#strategy = "neovim"
+    nmap <silent> <leader>t :TestNearest<CR>
+    nmap <silent> <leader>T :TestFile<CR>
+    nmap <silent> <leader>a :TestSuite<CR>
+    nmap <silent> <leader>l :TestLast<CR>
+    nmap <silent> <leader>g :TestVisit<CR>
+    let g:test#preserve_screen = 0
     let g:test#strategy = "vimux"
   " }}}
 
