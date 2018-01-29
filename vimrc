@@ -246,19 +246,23 @@
   " }}}
 
   " indent guides {{{
-  let g:indent_guides_start_level = 2
-  let g:indent_guides_guide_size = 1
+    let g:indent_guides_start_level = 2
+    let g:indent_guides_guide_size = 1
+  " }}}
 
   " neovim compatibility
-  let g:indent_guides_auto_colors = 0
-  hi IndentGuidesOdd  guibg=red   ctermbg=3
-  hi IndentGuidesEven guibg=green ctermbg=4
+    let g:indent_guides_auto_colors = 0
+    hi IndentGuidesOdd  guibg=red   ctermbg=3
+    hi IndentGuidesEven guibg=green ctermbg=4
   " }}}
 
   " ale
-  let g:airline#extensions#ale#enabled = 1
-  let g:ale_lint_on_text_changed = 'never'
-  let g:ale_lint_on_enter = 0
+    let g:airline#extensions#ale#enabled = 1
+    let g:ale_lint_on_text_changed = 'never'
+    let g:ale_lint_on_enter = 0
+    let g:used_javascript_libs = 'uderscore,jquery,vuejs'
+    let g:ale_ruby_rubocop_executable = 'bundle'
+  " }}}
 
   " tpope-vimragtag
     inoremap <M-o>       <Esc>o
