@@ -207,6 +207,7 @@
     " need to write `stty -ixon` in your bashrc
     nnoremap <C-S> :Ack <C-R><C-W><CR>
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
+    let g:ackprg = 'ag --nogroup --nocolor --column'
   " }}}
 
   " Fzf {{{
