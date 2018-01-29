@@ -39,6 +39,7 @@
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'tpope/vim-ragtag'
+  Plugin 'rizzatti/dash.vim'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
 
   call vundle#end()
@@ -255,6 +256,9 @@
     let g:ragtag_global_maps = 1
   " }}}
 
+  " dash
+    nmap <silent> <leader>d <Plug>DashSearch
+  " }}}
 
 " }}}
 
