@@ -3,6 +3,7 @@
   filetype off
 
   set rtp+=~/.vim/bundle/Vundle.vim
+  set rtp+=/usr/local/opt/fzf
   call vundle#begin()
 
   Plugin 'VundleVim/Vundle.vim'
@@ -18,6 +19,7 @@
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
   Plugin 'janko-m/vim-test'
+  Plugin 'junegunn/fzf.vim'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'marcweber/vim-addon-local-vimrc'
   Plugin 'maxbrunsfeld/vim-yankstack'
@@ -203,6 +205,13 @@
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
   " }}}
 
+  " Fzf {{{
+    let g:fzf_layout = { 'down': '~30%' }
+    nmap ; :Buffers<CR>
+    nmap <Leader>f :Files<CR>
+    nmap <Leader>r :Tags<CR>
+  " }}}
+
   " Vim-Test {{{
     nnoremap <leader>t :wa<CR>\|:TestFile<CR>
     nnoremap <leader>T :wa<CR>\|:TestNearest<CR>
@@ -221,11 +230,6 @@
     map <Leader>n :NERDTreeToggle<CR>
     let g:NERDTreeMouseMode = 3
     let g:NERDTreeHighlightCursorline = 0
-  " }}}
-
-  " Ctrlp {{{
-    let g:ctrlp_map = '<leader>f'
-    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
   " }}}
 
   " airline {{{
@@ -285,5 +289,11 @@ function! DoPrettyXML()
   exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%')
+  \                         : fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'right:50%:hidden', '?'),
+  \                 <bang>0)
 
 " vim: foldmarker={{{,}}} foldlevel=0 foldmethod=marker
