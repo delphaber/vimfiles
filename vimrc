@@ -8,13 +8,11 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-  " Plugin 'tpope/vim-haml'
+
+  Plugin 'sheerun/vim-polyglot'
   Plugin 'benmills/vimux'
   Plugin 'bkad/CamelCaseMotion'
   Plugin 'bling/vim-airline'
-  Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'delphaber/vim-slim'
-  Plugin 'digitaltoad/vim-pug'
   Plugin 'elixir-editors/vim-elixir'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
@@ -25,8 +23,6 @@
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'posva/vim-vue'
   Plugin 'scrooloose/nerdtree'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'thinca/vim-visualstar'
@@ -42,7 +38,6 @@
   Plugin 'tpope/vim-rhubarb'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
-  Plugin 'vim-ruby/vim-ruby'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
 
   call vundle#end()
