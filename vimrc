@@ -8,7 +8,6 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-
   Plugin 'sheerun/vim-polyglot'
   Plugin 'benmills/vimux'
   Plugin 'bling/vim-airline'
