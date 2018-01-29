@@ -38,6 +38,7 @@
   Plugin 'tpope/vim-rhubarb'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
+  Plugin 'tpope/vim-ragtag'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
 
   call vundle#end()
@@ -247,6 +248,13 @@
   let g:airline#extensions#ale#enabled = 1
   let g:ale_lint_on_text_changed = 'never'
   let g:ale_lint_on_enter = 0
+
+  " tpope-vimragtag
+    inoremap <M-o>       <Esc>o
+    inoremap <C-j>       <Down>
+    let g:ragtag_global_maps = 1
+  " }}}
+
 
 " }}}
 
