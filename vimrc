@@ -140,6 +140,13 @@
           \ let b:endwise_addition = '\=submatch(0)=="fn" ? "end)" : "end"'
   augroup END
 
+  " disable relative number for unfocused buffers
+  " augroup numbertoggle
+  "   autocmd!
+  "   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  "   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  " augroup END
+
 " General mappings {{{
   let mapleader=","
 
