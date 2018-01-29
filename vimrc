@@ -11,7 +11,6 @@
 
   Plugin 'sheerun/vim-polyglot'
   Plugin 'benmills/vimux'
-  Plugin 'bkad/CamelCaseMotion'
   Plugin 'bling/vim-airline'
   Plugin 'elixir-editors/vim-elixir'
   Plugin 'ervandew/supertab'
@@ -245,15 +244,9 @@
 
   " ale
   let g:airline#extensions#ale#enabled = 1
-  " Write this in your vimrc file
   let g:ale_lint_on_text_changed = 'never'
-  " You can disable this option too
-  " if you don't want linters to run on opening a file
   let g:ale_lint_on_enter = 0
 
-  let delimitMate_expand_space = 1
-  let g:used_javascript_libs = 'uderscore,jquery,angularjs'
-  call camelcasemotion#CreateMotionMappings('<leader>')
 " }}}
 
 function! DoPrettyXML()
