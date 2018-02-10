@@ -52,7 +52,7 @@
     set ttymouse=xterm2                       " and we want it to be fast
   endif
   set encoding=utf-8                          " sets the character encoding used inside Vim
-  set clipboard=unnamed                       " use unnamed register on MAC OS
+  set clipboard^=unnamed,unnamedplus
   set hidden                                  " allow backgrounding buffers without writing them
   set timeout timeoutlen=1000 ttimeoutlen=10  " fix delay after pressing ESC
   set autoread                                " auto reload buffer if file has been changed
