@@ -158,6 +158,10 @@
   " Bad behaviours
   xnoremap u <Nop>
 
+  " Copy buffer path in clipboard
+  nnoremap cp :let @+=expand('%')<CR>
+  nnoremap cap :let @+=expand('%:p')<CR>
+
   " clear the search buffer when hitting return
   nnoremap <CR> :nohlsearch<CR>
 
