@@ -16,7 +16,6 @@
   Plugin 'godlygeek/tabular'
   Plugin 'janko-m/vim-test'
   Plugin 'junegunn/fzf.vim'
-  Plugin 'kchmck/vim-coffee-script'
   Plugin 'marcweber/vim-addon-local-vimrc'
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
