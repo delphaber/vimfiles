@@ -274,7 +274,7 @@
       \ }
     let g:ale_lint_on_text_changed = 'never'
     let g:ale_lint_on_enter = 0
-    let g:used_javascript_libs = 'uderscore,jquery,vuejs'
+    let g:used_javascript_libs = 'vuejs'
     let g:ale_ruby_rubocop_executable = 'bundle'
   " }}}
 
