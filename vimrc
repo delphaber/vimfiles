@@ -39,6 +39,7 @@
   Plugin 'tpope/vim-ragtag'
   Plugin 'rizzatti/dash.vim'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
+  Plugin 'zhaocai/GoldenView.Vim'
 
   call vundle#end()
 " }}}
@@ -203,6 +204,8 @@
 " }}}
 
 " Plugins Configuration {{{
+  let g:goldenview__enable_default_mapping = 0
+
   " lightline {{{
     let g:lightline = {}
     let g:lightline.component_expand = {
