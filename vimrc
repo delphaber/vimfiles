@@ -12,7 +12,6 @@
   Plugin 'benmills/vimux'
   Plugin 'bling/vim-airline'
   Plugin 'christoomey/vim-tmux-navigator'
-  Plugin 'elixir-editors/vim-elixir'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
   Plugin 'janko-m/vim-test'
