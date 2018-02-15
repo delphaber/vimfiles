@@ -8,10 +8,9 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-  Plugin 'itchyny/lightline.vim'
-  Plugin 'maximbaz/lightline-ale'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'benmills/vimux'
+  Plugin 'bling/vim-airline'
   Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
@@ -204,22 +203,7 @@
 " }}}
 
 " Plugins Configuration {{{
-  let g:goldenview__enable_default_mapping = 0
-
-  " lightline {{{
-    let g:lightline = {}
-    let g:lightline.component_expand = {
-          \  'linter_warnings': 'lightline#ale#warnings',
-          \  'linter_errors': 'lightline#ale#errors',
-          \  'linter_ok': 'lightline#ale#ok',
-          \ }
-    let g:lightline.component_type = {
-          \     'linter_warnings': 'warning',
-          \     'linter_errors': 'error',
-          \     'linter_ok': 'left',
-          \ }
-    let g:lightline.active = { 'right': [[ 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
-  " }}}
+    let g:goldenview__enable_default_mapping = 0
 
   " Ack {{{
     " easy global search
@@ -258,6 +242,12 @@
     let g:NERDTreeHighlightCursorline = 0
   " }}}
 
+  " airline {{{
+    let g:airline_left_sep='›'
+    let g:airline_right_sep='‹'
+    let g:airline_powerline_fonts = 0
+  " }}}
+
   " indent guides {{{
     let g:indent_guides_start_level = 2
     let g:indent_guides_guide_size = 1
@@ -270,11 +260,7 @@
   " }}}
 
   " ale
-   let g:lightline.component_expand = {
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
-      \ }
+    let g:airline#extensions#ale#enabled = 1
     let g:ale_lint_on_text_changed = 'never'
     let g:ale_lint_on_enter = 0
     let g:used_javascript_libs = 'vuejs'
