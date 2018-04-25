@@ -9,7 +9,6 @@
   Plugin 'VundleVim/Vundle.vim'
 
   Plugin 'benmills/vimux'
-  Plugin 'bling/vim-airline'
   Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
@@ -37,6 +36,7 @@
   Plugin 'tpope/vim-unimpaired'
   Plugin 'tpope/vim-ragtag'
   Plugin 'rizzatti/dash.vim'
+  Plugin 'vim-airline/vim-airline'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
   Plugin 'zhaocai/GoldenView.Vim'
 
