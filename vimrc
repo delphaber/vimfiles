@@ -17,12 +17,12 @@
   Plugin 'marcweber/vim-addon-local-vimrc'
   Plugin 'maxbrunsfeld/vim-yankstack'
   Plugin 'mileszs/ack.vim'
+  Plugin 'morhetz/gruvbox'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'scrooloose/nerdtree'
   Plugin 'sheerun/vim-polyglot'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'thinca/vim-visualstar'
-  Plugin 'tomasr/molokai'
   Plugin 'tpope/vim-abolish'
   Plugin 'tpope/vim-commentary'
   Plugin 'tpope/vim-endwise'
@@ -61,8 +61,11 @@
 " }}}
 
 " VIM UI {{{
-  color molokai
-  let g:rehash256 = 1
+  color gruvbox
+  colorscheme gruvbox
+  " let g:rehash256 = 1
+  let g:gruvbox_contrast_dark='hard'
+  " let g:airline_theme='gruvbox'
   set background=dark
 
   set cursorline                  " highlight the screen line of the cursor
