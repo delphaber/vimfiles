@@ -8,7 +8,6 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-  Plugin 'sheerun/vim-polyglot'
   Plugin 'benmills/vimux'
   Plugin 'bling/vim-airline'
   Plugin 'christoomey/vim-tmux-navigator'
@@ -21,6 +20,7 @@
   Plugin 'mileszs/ack.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'sheerun/vim-polyglot'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'thinca/vim-visualstar'
   Plugin 'tomasr/molokai'
