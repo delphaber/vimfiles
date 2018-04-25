@@ -220,9 +220,13 @@
   " Ack {{{
     " easy global search
     " need to write `stty -ixon` in your bashrc
+    " nnoremap <Leader>a <Esc>:Ag<space>
     nnoremap <C-S> :Ack <C-R><C-W><CR>
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
-    let g:ackprg = 'ag --nogroup --nocolor --column'
+    " let g:ackprg = 'ag --nogroup --nocolor --column'
+    if executable('ag')
+      let g:ackprg = 'ag --vimgrep'
+    endif
   " }}}
 
   " Fzf {{{
