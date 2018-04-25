@@ -303,4 +303,11 @@ command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'right:50%:hidden', '?'),
   \                 <bang>0)
 
+" Abbrevations {{{
+  cabbrev ACk Ack
+  cabbrev ACK Ack
+  iabbrev lenght length
+  iabbrev ligth light
+" }}}
+
 " vim: foldmarker={{{,}}} foldlevel=0 foldmethod=marker
