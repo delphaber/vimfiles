@@ -281,6 +281,7 @@
     let g:ale_lint_on_enter = 0
     let g:used_javascript_libs = 'vuejs'
     let g:ale_ruby_rubocop_executable = 'bundle'
+    let g:ale_linters = { 'ruby': ['ruby', 'rubocop', 'reek'] }
   " }}}
 
   " tpope-vimragtag
