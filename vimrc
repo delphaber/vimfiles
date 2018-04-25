@@ -37,6 +37,7 @@
   Plugin 'tpope/vim-rhubarb'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
+  Plugin 'tpope/vim-vinegar'
   Plugin 'vim-airline/vim-airline'
   Plugin 'w0rp/ale' " ALE (Asynchronous Lint Engine)
   Plugin 'zhaocai/GoldenView.Vim'
