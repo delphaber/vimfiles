@@ -203,6 +203,9 @@
   " Visual shifting (does not exit Visual mode)
   vnoremap < <gv
   vnoremap > >gv
+
+  " Mastering VIM Quickly
+  nmap <F2> :!git shortlog HEAD -s -n %<cr>
 " }}}
 
 " Commands and functions {{{
