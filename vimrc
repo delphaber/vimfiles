@@ -8,8 +8,8 @@
 
   Plugin 'VundleVim/Vundle.vim'
 
-  Plugin 'benmills/vimux'
   Plugin 'christoomey/vim-tmux-navigator'
+  Plugin 'christoomey/vim-tmux-runner'
   Plugin 'ervandew/supertab'
   Plugin 'godlygeek/tabular'
   Plugin 'janko-m/vim-test'
@@ -246,7 +246,7 @@
     nmap <silent> <leader>l :TestLast<CR>
     nmap <silent> <leader>g :TestVisit<CR>
     let g:test#preserve_screen = 0
-    let g:test#strategy = "vimux"
+    let g:test#strategy = "vtr"
   " }}}
 
   " Yankstack {{{
