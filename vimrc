@@ -223,12 +223,10 @@
   " Ack {{{
     " easy global search
     " need to write `stty -ixon` in your bashrc
-    " nnoremap <Leader>a <Esc>:Ag<space>
     nnoremap <C-S> :Ack <C-R><C-W><CR>
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
-    " let g:ackprg = 'ag --nogroup --nocolor --column'
-    if executable('ag')
-      let g:ackprg = 'ag --vimgrep'
+    if executable('rg')
+      let g:ackprg = 'rg --vimgrep'
     endif
   " }}}
 
@@ -299,13 +297,6 @@
   " }}}
 
 " }}}
-
-
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%')
-  \                         : fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'right:50%:hidden', '?'),
-  \                 <bang>0)
 
 " Abbrevations {{{
   cabbrev ACk Ack
