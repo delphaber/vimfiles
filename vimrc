@@ -226,7 +226,7 @@
     nnoremap <C-S> :Ack <C-R><C-W><CR>
     vnoremap <C-S> y<Esc>:Ack '<C-R>"'<CR>
     if executable('rg')
-      let g:ackprg = 'rg --vimgrep'
+      let g:ackprg = 'rg --hidden --vimgrep'
     endif
   " }}}
 
